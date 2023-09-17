@@ -1,0 +1,87 @@
+.inner-content .inner-section {
+    padding: 30px 50px;
+  }
+  .inner-banner-M {
+    background: url('../../assets/images/t-imgs/slide3.jpg') no-repeat center;
+    background-size: cover;
+        box-shadow: 250px 250px 250px 250px #0000009e inset;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        position: relative;
+        height: 600px;
+        z-index: 1;
+}
+  .color01 {
+    background-color: #f2f2f2 !important;
+  }
+  
+  .uppercase {
+    text-transform: uppercase;
+  }
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  .Call{
+    border: 2px solid #00a431;
+    background: #00a431;
+    color: #fff !important;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 0px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    text-transform: capitalize;
+    font-weight: 500;
+
+}
+  .hovercolor,
+  .hovercolor a {
+    color: #e74c3c !important;
+  }
+  h3 {
+    font-weight: bold !important;
+  }
+  
+  .maintxt {
+    position: relative;
+  }
+  
+  .div_z {
+    z-index: 1;
+  }
+  div.card > img {
+    height: 420px;
+  }
+  
+  p,
+  a {
+    font-family: "Poppins", sans-serif !important;
+    /* font-size: 22px !important; */
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Gilroy-Bold", sans-serif !important;
+    font-weight: bold;
+  }
+  .cbgChange {
+    background-color: transparent;
+  }
+  .marginAdjust {
+    margin: 30px 200px 30px;
+  }
+  
+  #more {
+    display: none;
+  }
+  li{
+    margin-bottom: 10px;
+  }

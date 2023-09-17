@@ -1,0 +1,143 @@
+.main{
+    padding: 30px;
+    border: 1px solid;
+    box-shadow: 2px 2px 15px #888888;
+    margin: 95px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    height: 215px;
+}
+.signatures {
+    margin-left:50px ;
+    margin-right:50px ;
+    justify-content: center;
+}
+.input11{
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    text-align: center;
+}
+p {
+    padding: 0;
+    font-size: 16px !important;
+    line-height: 1.7;
+    color: #000 !important;
+}
+    li{
+        margin-top: 20px;
+        color: #464646;
+        // text-align: justify;
+        span{
+            text-decoration: underline;
+            font-weight: 500;
+        }
+    }  
+    // input{
+    //     border: none;
+    //     border-bottom: 1px solid;
+    //     outline: none;
+    //     text-align: center;
+    // }
+
+.end{
+    padding: 0 35px;
+}
+.signatures{
+    display: flex;
+    flex-direction: row;
+}
+.singnature{
+    padding: 0 50px 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.signature-container {
+    width: 300px;
+    border-style: dashed;
+    border-width: 1px;
+    margin-bottom: 20px;
+    background-color: rgb(221, 216, 216);
+
+    
+}
+.refund_form input{
+    width: 100% !important;
+}
+.input{
+    width: 300px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.buttons {
+    float: left;
+  
+    button {
+        margin-right: 10px;
+        padding: 10px;
+        background-color: #e20074;
+        color: white;
+        border-radius: 5px;
+    }
+}
+.form-check-input:checked {
+    background-color: #e20074;
+    border-color: #e20074;
+}
+a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 736px) {
+    .main{
+        padding: 20px;
+        margin: 10px;
+    }
+
+}
+@media screen and (max-width: 520px) {
+    .main{
+    padding: 20px 20px 110px 20px;
+    margin-bottom: 40px;
+    }
+    .singnature{
+    padding: 0 30px 50px;
+    }
+    .input{
+        width: 230px;
+        padding: 5px 10px;
+        margin: 5px;
+    }
+    .signature-container {
+        width: 240px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .input{
+        width: 210px;
+        padding: 5px 10px;
+        margin: 5px;
+    }
+    .signature-container {
+        width: 210px;
+    }
+    .buttons {
+        text-align: center;
+        button {
+            margin-bottom: 10px;
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .input{
+        width: 174px;
+        padding: 5px 10px;
+        margin: 5px;
+        margin-top: 10px;
+    }
+    .signature-container {
+        width: 180px;
+    }
+}

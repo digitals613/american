@@ -1,0 +1,357 @@
+.w3ls-btn {
+    background: #e20074;
+    color: #fff;
+    padding: 10px 43px;
+    display: block;
+    // letter-spacing: 1px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    width: 30%;
+}
+.pricee{
+    position: absolute;
+    left: -10px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f6f7;
+    margin-top:70px
+}
+.main2{
+    background-color: #fff;
+    border-radius: 15px;
+}
+.form-group{
+    padding: 0 10px;
+    margin-bottom: 15px;
+    // width: 50%;
+}
+.btnn{
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-fee{
+    width: 70%;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    background: #808080;
+    color: #fff;
+}
+h5{
+    text-align: center;
+    padding: 15px 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.credit-card-box {
+    perspective: 1000;
+    width: 400px;
+    height: 220px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    /* &:hover .flip,
+    &.hover .flip {
+        transform: rotateY(180deg);
+    } */
+    /* .front,
+    .back {
+        width: 400px;
+        height: 220px;
+        border-radius: 15px;
+        backface-visibility: hidden;
+        background: none;
+        position: absolute;
+        color: #fff;
+        font-family: ' Roboto', sans-serif;
+        top: -90px;
+        left: 50%;
+    } */
+
+    /* .flip {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    } */}
+    .logo {
+        position: absolute;
+        top: 9px;
+        right: 20px;
+        width: 60px;
+        /* svg {
+            width: 100%;
+            height: auto;
+            fill: #fff;
+        } */
+    }
+    .front {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+    .back {
+        transform: rotateY(180deg);
+        /* .logo {
+            top: 185px;
+        } */
+    }
+    .chip {
+        position: absolute;
+        width: 60px;
+        height: 45px;
+        top: 20px;
+        left: 20px;
+        background: linear-gradient(135deg, hsl(269, 54%, 87%) 0%, hsl(200, 64%, 89%) 44%, hsl(18, 55%, 94%) 100%);
+        ;
+        border-radius: 8px;
+        /* &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 4px solid hsla(0, 0, 50, .1);
+            width: 80%;
+            height: 70%;
+            border-radius: 5px;
+        } */
+    }
+    .strip {
+        background: linear-gradient(135deg, hsl(0, 0, 25%), hsl(0, 0, 10%));
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 30px;
+        left: 0;
+    }
+    .number {
+        position: absolute;
+        margin: 0 auto;
+        top: 103px;
+        left: 19px;
+        font-size: 38px;
+    }
+    .ccv {
+        height: 36px;
+        background: #fff;
+        width: 91%;
+        border-radius: 5px;
+        top: 110px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        margin: 0 auto;
+        color: #000;
+        text-align: right;
+        padding: 10px;
+        /* label {
+            margin: -25px 0 14px;
+            color: #fff;
+        } */
+    }
+.checkout{
+    width: 650px;
+    background: #fff;
+    padding: 16px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+    .checkout,
+.text-center {
+    position: relative
+}
+
+.credit-card-box.hover .flip,
+.credit-card-box:hover .flip {
+    transform: rotateY(180deg)
+}
+
+.credit-card-box .chip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 4px solid #c19026;
+    width: 80%;
+    height: 70%;
+    border-radius: 5px
+}
+
+.credit-card-box .ccv {
+    height: 36px;
+    background: #fff;
+    width: 91%;
+    border-radius: 5px;
+    top: 110px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0 auto;
+    color: #000;
+    text-align: right;
+    padding: 7px;
+}
+
+.credit-card-box .ccv label {
+  color: #fff;
+  position: absolute;
+  top: -26px;
+  right: 4px;
+}
+.credit-card-box .back::before,
+.credit-card-box .front::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(http://cdn.flaticon.com/svg/44/44386.svg) center no-repeat;
+    background-size: cover;
+    opacity: .05
+}
+
+.credit-card-box .flip {
+    transition: .6s;
+    transform-style: preserve-3d;
+    position: relative
+}
+
+.credit-card-box .front {
+    z-index: 2;
+    transform: rotateY(0)
+}
+
+.credit-card-box .chip {
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #fcda4f 0, #fcda4f 44%, #fcda4f 100%);
+    border-radius: 8px
+}
+
+.credit-card-box .logo svg {
+    width: 100%;
+    height: auto;
+    fill: #fff
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+.credit-card-box .card-expiration-date {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.credit-card-box .card-number {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-align: right;
+}
+
+.credit-card-box .card-holder {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.credit-card-box label {
+  font-size: 16px;
+//   letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.credit-card-box .back {
+    transform: rotateY(180deg)
+}
+
+.credit-card-box .back,
+.credit-card-box .front {
+    width: 400px;
+    height: 220px;
+    border-radius: 15px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: linear-gradient(135deg, #dfaa3a, #c49021);
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .3)
+}
+
+.credit-card-box .strip {
+    background: linear-gradient(135deg, #404040, #1a1919);
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 30px;
+    left: 0
+}
+
+.credit-card-box .back .logo {
+    top: 185px
+}
+
+.credit-card-box .logo {
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    width: 60px
+}
+.form-padding{
+    padding-top: 250px;
+}
+@media screen and (max-width:450px) {
+    .checkout{
+        width: 375px;
+    }
+    .w3ls-btn{
+        width: 50%;
+    }
+}
+@media screen and (max-width:400px) {
+    .checkout{
+        width: 300px;
+    }
+    .credit-card-box{
+        width: 300px;
+        height: 185px; 
+    }
+    .credit-card-box .back,
+    .credit-card-box .front {
+        width: 300px;
+        height: 185px;
+    }
+    .form-padding{
+        padding-top: 200px;
+    }
+    .w3ls-btn{
+        width: 70%;
+    }
+}

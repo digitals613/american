@@ -1,0 +1,283 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+    font-family: 'Poppins', sans-serif !important;
+}
+.bg-primary{
+    background-color: #e20074;
+}
+.text-primary{
+    color: #e20074;
+}
+.btn-primary:focus{
+    box-shadow: none;
+}
+.choose-criteria {
+    padding: 8px;
+    min-height: 100px;
+    background: #000;
+}
+.setPadding1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+.text-grey{
+    color: grey;
+}
+.pd-0-i {
+    padding: 0!important;
+}
+.choose-criteria .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hd1 {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px grey
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #000
+}
+.cdk-overlay-pane{
+    width: 400px;
+    max-width: 80vw;
+    position: absolute !important;
+    bottom: 5%;
+    right: 1%;
+
+}
+.accordion-button:not(.collapsed) {
+    color: #e20074;
+    background-color: #b39cca45;
+}
+.accordion-button {
+    font-weight: 600 !important;
+    padding: 1.5rem 1.25rem;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.w-70{
+    width: 70%;
+}
+.w-60{
+    width: 60%;
+}
+.w-40{
+    width: 40%;
+}
+.w-30{
+    width: 30%;
+}
+.services-bg-color{
+    display: flex;
+}
+.bg-services {
+    background: linear-gradient(#ffffff59, rgb(255 255 255 / 0%)), url('./assets/images/truks-image.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 10px 10px 145px 220px rgb(0 0 0 / 78%) inset;
+    title{
+        align-self: center;
+        h3{
+            margin: 0;
+        }
+    }
+}
+.align-w3 {
+    padding: 2em 0;
+}
+.mat-dialog-container {
+    padding: 0!important;
+}
+::ng-deep .cdk-overlay-pane{
+    max-height: 375px !important;
+}
+.svg_map svg{
+    // height: 265px;
+    width: 500px;
+    path:hover {
+        stroke: #000!important;
+        stroke-width: 1px;
+        stroke-linejoin: round;
+        fill: #e20074!important;
+        cursor: pointer;
+    }
+}
+.bg-smokey{
+    background: whitesmoke !important;
+}
+.bg-white{
+    background: #fff !important;
+}
+.text-dark{
+    color: #000 !important;
+}
+.title h3{
+    color: #fff !important;
+}
+.w-200px{
+    width: 200px;
+}
+p{
+    padding: 0;
+    font-size: 16px !important;
+    line-height: 1.7;
+    color: #000 !important;
+}
+.heading{
+    font-weight: 600;
+}
+.mt-70{
+    margin-top: 70px !important;
+}
+.mt-90{
+    margin-top: 90px !important;
+}
+.Call{
+    border: 2px solid #00a431;
+    background: #00a431;
+    color: #fff !important;
+    padding: 9px 35px;
+    // letter-spacing: 1px;
+    font-size: 20px;
+    border-radius: 0px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    text-transform: capitalize;
+    font-weight: 500;
+
+}
+.Call:focus{
+box-shadow: none;
+}
+.abc{ 
+    .measurements{
+        background: #fff !important;
+    }
+    .measurements p:first-child{
+        background: #e20074;
+        color: #fff !important;
+    }
+    .pop-up-timer1{
+        position: relative  !important;
+        bottom: unset !important;
+        right: unset !important;
+    }
+    .measurements p{
+        color: #000 !important;
+    }
+}
+.measurements{
+    padding: 5px 10px!important;
+    width: 23%;
+    margin: 0 5px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 69px;
+    display: inline-block;
+    background: #000;
+}
+.measurements p:first-child {
+    color: #000!important;
+    padding: 5px;
+    background: #fff;
+    border-radius: 3px;
+    font-size: 24px;
+    margin: 0;
+    min-width: 50px;
+    font-weight: 600;
+}
+.measurements p {
+    color: #fff !important;
+    padding-top: 0;
+    font-weight: 700;
+    font-size: 14px !important;
+    margin: 0;
+}
+.mr-3 {
+    margin-right: 10px;
+}
+.mt-90{
+    margin-top: 90px !important;
+}
+.Call a{
+    color: #fff !important;
+}
+.quote{
+    border:none;
+    background: #e20074;
+    color: #fff;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 0px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    text-transform: capitalize;
+    font-weight: 500;
+ }
+@media (max-width:991px) {
+    .hd1{
+        font-size: 20px;
+    }
+    .services-bg-color {
+        flex-direction: column;
+    }
+}
+@media (max-width:576px) {
+    
+    .measurements p{
+        font-size: 10px !important;
+    }
+    .measurements p:first-child{
+        min-width: 35px !important;
+    }
+    .measurements{
+        margin: 0 2px !important;
+        padding: 5px !important;
+    }
+    .hd1{
+        font-size: 18px;
+    }
+    .services-bg-color{
+        padding: 0;
+    }
+    
+    .Sub-btn {
+        font-size: 13px !important;
+        padding: 5px 21px !important;
+    }
+}
+@media (max-width:430px) {
+    .choose-criteria #btn-quote{
+        margin-top: 10px;
+    }
+    h1{
+        font-size: 34px !important;
+    }
+    h2{
+        font-size: 28px !important;
+    }
+}

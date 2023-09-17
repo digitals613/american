@@ -1,0 +1,37 @@
+span.post-icon {
+    position: absolute;
+    text-align: center;
+    font-size: 1.2em;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding:12px;
+    text-transform: capitalize;
+    background: rgba(5, 5, 5, 0.28);
+    color: #fff;
+}
+a.blog_link {
+    display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    bottom: 10px;
+    padding: 6px 18px;
+    border-radius: 10px;
+    background: #e20074;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+}
+.space-sec .card {
+    height: 470px;
+}
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #464646 !important;
+}
+.blog_w3ls{
+    margin-top: 85px;
+}

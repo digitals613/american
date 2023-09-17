@@ -1,0 +1,102 @@
+.card{
+    border: solid 1px #e2e6ec;
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: 0 5px 30px 0 rgb(35 43 54 / 15%);
+}
+.Ratingg .fa-star{
+    color: yellow;
+}
+.banner {
+    background: url('../../assets/images/banners/main-banner.jpg') center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 600px;
+}
+.cardimghead{
+    font-weight: 500;
+    font-size: 22px;
+    color: #000;
+}
+.port-dec1{
+    padding: 1em;
+    height: 250px;
+    background: #eee;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.Call{
+    border: 2px solid #00a431;
+    background: #00a431;
+    color: #fff;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 0px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    text-transform: capitalize;
+    font-weight: 500;
+
+}
+.Call:focus{
+box-shadow: none;
+}
+.setpara{
+    width: 80%;
+    font-size: 18px;
+    text-align: center;
+}
+/* popup */
+.popup-effect {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+}
+
+.popup-effect:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    background: #fff;
+    border-radius: 4px;
+    max-width: 500px;
+    position: relative;
+    margin: 2em auto;
+    padding: 3em 2em;
+    z-index: 0;
+    text-align: center;
+}
+.popup .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    transition: all .2s;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+}
+@media screen and (max-width: 576px) {
+    .banner{
+        height: 400px !important;
+    }
+}

@@ -1,0 +1,137 @@
+<!-- inner banner -->
+<div class="inner-banner-w3ls d-flex flex-column justify-content-center align-items-center">
+</div>
+<!-- //inner banner -->
+<!-- breadcrumbs -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb d-flex justify-content-center">
+        <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+    </ol>
+</nav>
+<!-- //breadcrumbs -->
+
+<!-- contact -->
+<section class="contact-wthree align-w3" id="contact">
+    <div class="container">
+        <div class="wthree_pvt_title text-center">
+            <h4 class="w3pvt-title">contact us
+            </h4>
+            <!-- <p class="sub-title">Subheadings stand out because they are like mini titles. They make your post stand
+                out and
+                make it more readable.</p> -->
+        </div>
+        <div class="mx-auto text-center">
+            <!-- <iframe class="mt-lg-4 contact-form-wthreelayouts"
+                src="https://www.google.com/maps/place/32%C2%B046'09.3%22N+96%C2%B046'04.5%22W/@32.7692426,-96.7701058,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x96a1c32be83a2107!8m2!3d32.7692426!4d-96.7679171"
+                allowfullscreen></iframe> -->
+                <agm-map style="height:570px" [zoom]='16' [latitude]="lat" [longitude]="lng" [scrollwheel]='false'>
+                <agm-marker [latitude]="lat" [longitude]="lng">
+                </agm-marker>
+              </agm-map>
+            <!-- //footer right -->
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-7">
+                <h5 class="cont-form">send us a note</h5>
+                <div class="contact-form-wthreelayouts">
+                    <form action="#" method="post" class="register-wthree" [formGroup]="contactUs">
+                        <div class="form-group">
+                            <label>
+                                Your Name
+                            </label>
+                            <input class="form-control" type="text" placeholder="Enter name" name="name" required="" [(ngModel)]="name" formControlName="name">
+                            <mat-error
+									*ngIf="contactUs.controls.name?.invalid && contactUs.controls.name?.touched">
+									<mat-error *ngIf="contactUs.get('name')?.hasError('required')">
+										Name is Required!
+									</mat-error>
+									<mat-error *ngIf="contactUs.get('name')?.hasError('minlength')">
+										Name should be atleast 4 characters long!
+									</mat-error>
+								</mat-error>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Mobile
+                            </label>
+                            <input class="form-control" type="number" placeholder="Enter phone no" name="mobile" required="" [(ngModel)]="phone" formControlName="number">
+                            <mat-error
+									*ngIf="contactUs.controls.number?.invalid && contactUs.controls.number?.touched">
+									<mat-error *ngIf="contactUs.get('number')?.hasError('required')">
+										Name is Required!
+									</mat-error>
+								</mat-error>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Email
+                            </label>
+                            <input class="form-control" type="email" placeholder="Enter email" name="email"
+                                required="" [(ngModel)]="email" formControlName="email">
+                                <mat-error
+									*ngIf="contactUs.controls.email?.invalid && contactUs.controls.email?.touched">
+									<mat-error *ngIf="contactUs.get('email')?.hasError('required')">
+										Email is Required!
+									</mat-error>
+									<mat-error *ngIf="contactUs.get('email')?.hasError('pattern')">
+										Pleases enter valid email!
+									</mat-error>
+								</mat-error>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Your message
+                            </label>
+                            <textarea placeholder="Type your message here..." name="message"
+                                class="form-control" [(ngModel)]="message" formControlName="message"></textarea>
+                                <mat-error
+									*ngIf="contactUs.controls.message?.invalid && contactUs.controls.message?.touched">
+									<mat-error *ngIf="contactUs.get('message')?.hasError('required')">
+										Message is Required!
+									</mat-error>
+									<mat-error *ngIf="contactUs.get('message')?.hasError('minlength')">
+										Message should be atleast 20 characters long!
+									</mat-error>
+								</mat-error>
+                        </div>
+                        <div class="form-group mb-0">
+                            <button type="submit"
+                                class="btn btn-w3layouts btn-block bg-theme text-wh w-100 font-weight-bold text-uppercase" (click)="Contact()" 
+                                [disabled]="!contactUs.valid">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <h5 class="cont-form">get in touch</h5>
+                <div class="row flex-column">
+                    <div class="contact-w3">
+                        <span class="fa fa-envelope-open  mb-3"></span>
+                        <div class="d-flex flex-column">
+                            <a class="d-block" href="mailto:contact@americanautotransports.com" target="_blank">contact@americanautotransports.com</a>
+                            <!-- <a href="mailto:example@email.com" class="my-2 d-block">info@example2.com</a>
+                            <a href="mailto:example@email.com">info@example3.com</a> -->
+                        </div>
+                    </div>
+                    <div class="contact-w3 my-4">
+                        <span class="fa fa-phone mb-3"></span>
+                        <div class="d-flex flex-column">
+                            <h6> <a href="tel:+1 (818) 760-5145">(818) 760-5145</a></h6>
+                            <!-- <p class="my-1">+456 123 7890</p>
+                            <p>+856 123 7890</p> -->
+                        </div>
+                    </div>
+                    <div class="contact-w3">
+                        <span class="fa fa-home mb-3"></span>
+                        <address (click)="OpenMap()" style="cursor: pointer;">1033 Turnpike St, Canton, MA 02021, United States</address>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //contact -->

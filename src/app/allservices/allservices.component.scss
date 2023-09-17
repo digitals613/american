@@ -1,0 +1,45 @@
+.mt-75{
+    margin-top: 75px;
+}
+.bg-services {
+    background: linear-gradient(#ffffff59, rgb(255 255 255 / 0%)), url('../../assets/images/truks-image.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 10px 10px 145px 220px rgb(0 0 0 / 78%) inset;
+    height: 200px;
+}
+.ALGN{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.card-img-top{
+    width: 140px !important;
+    align-self: center;
+}
+.card-title{
+    // margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: 700;
+}
+.col-sm-4{
+    margin-bottom: 20px;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    height: 230px;
+}
+.card:hover{
+    box-shadow: 0 5px 25px 0 rgb(64 64 64 / 30%);
+    transform: scale(1.05);
+}
+.card-body{
+    padding: 0.5rem !important;
+}
+.card-text{
+    font-size: 14px !important;
+    line-height: unset;
+}

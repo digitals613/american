@@ -1,0 +1,339 @@
+.opacityColor {
+    background-color: #000000;
+  }
+  .inner-banner-1 {
+    background:linear-gradient(#ffffff59, rgba(255, 255, 255, 0)), url('../../assets/images/banners/banner2.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 250px 250px 250px 250px #0000009e inset;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    height: 600px;
+    z-index: 1;
+
+}
+a{
+  text-decoration: none;
+  color: #000000;
+}
+.Call{
+    border: 2px solid #00a431;
+    background: #00a431;
+    color: #fff !important;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 0px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    text-transform: capitalize;
+    font-weight: 500;
+
+}
+.Call:focus{
+box-shadow: none;
+}
+  .inner-banner {
+    /* width: 100%;
+            height: 100%;
+            box-shadow: inset 3px 3px 10px 0 #b30606;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            -webkit-box-shadow: 10px 10px 5px #ccc; */
+    box-shadow: inset 3px 3px 10px 0 #b30606;
+    opacity: 0.3;
+    background-color: #45517a;
+  }
+  
+  .colorDark {
+    background-color: #e20050 !important;
+  }
+  .s11 {
+    background-image: linear-gradient(to right, #c05d90, #e22043);
+  }
+  .borderRightc {
+    border-right: 2px black solid !important;
+  }
+  .changeFont {
+    font-size: larger;
+    color: white !important;
+  }
+  a {
+    color: inherit;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+  .paraBorder {
+    border-bottom: 1px solid #dedbdb;
+  }
+  .Closedd {
+    background-color: navy !important;
+  }
+  
+  .card {
+    border-radius: 25px !important;
+  }
+
+  .bikeImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    font-size: 16px;
+  }
+  body {
+    /* background-color: white  ; */
+  
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bolder;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 20 px;
+  }
+  
+  h5 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 28px bolder;
+  }
+  .setPadding {
+    padding: 40px;
+  }
+
+  .setPadding2 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-top: 30px !important;
+  }
+  .flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .boxShadow {
+    // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 510px !important;
+    width: 400px !important;
+    background-color: white !important;
+  }
+  .card1 {
+    border-radius: 4px;
+    max-width: 550px !important;
+  }
+  .colorcheck {
+    width: 100% !important;
+    background-color: whitesmoke;
+  }
+  .bgCOLOR1 {
+    border: none;
+    background: #e20074;
+    color: #fff;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 0;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    -moz-border-radius: 0;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  .Closedd {
+    background-color: navy !important;
+  }
+  
+  .s2,
+  .s3,
+  .s4,
+  .s5,
+  .s6,
+  .s7,
+  .s8,
+  .si9 {
+    margin-top: 25px;
+  }
+  .footer {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+  }
+  .fixP {
+    position: fixed;
+    right: 0;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  .bikeImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 1199px) {
+    .borderRightc {
+      border-right: 2px solid black;
+    }
+    .imgCheckk {
+      height: 400px !important;
+      width: 550px !important;
+    }
+    .si9 {
+      width: 1000px;
+    }
+    .boxes {
+      max-width: 400px !important;
+      max-height: 400px !important;
+    }
+    .boxShadow {
+      // box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+      height: 340px !important;
+      width: 400px !important;
+      background-color: white !important;
+    }
+    .paddingNeed {
+      padding: 40px;
+    }
+  }
+  @media (max-width: 990px) {
+    .borderRightc {
+      border-right: 0px solid black !important;
+      border-bottom: 2px solid black !important;
+    }
+    .paddingNeed {
+      padding: 0px;
+    }
+    .headingBar {
+      display: flex;
+      text-align: center;
+    }
+    .s8 {
+      /* height: inherit; */
+  
+      display: flex;
+  
+      text-align: center;
+    }
+    .si9 {
+      width: 500px;
+      margin: auto !important;
+    }
+    .boxes {
+      max-width: 400px !important;
+      max-height: 400px !important;
+      margin-bottom: 25px !important;
+    }
+    .boxShadow {
+      box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+      height: 330px !important;
+      width: 400px !important;
+      background-color: white !important;
+      position: relative;
+    }
+    .card222 {
+      height: 200px !important;
+      width: 400px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .adjustSize {
+      font-size: 15px !important;
+    }
+  }
+  @media (max-width: 576px) {
+    .adjustSize {
+      font-size: 12px !important;
+    }
+    .paraBorder {
+      display: none;
+    }
+    .s8 {
+      display: flex;
+  
+      text-align: center;
+    }
+    .si9 {
+      width: 500px;
+      margin: auto !important;
+    }
+    .boxes {
+      max-width: 400px !important;
+      max-height: 400px !important;
+      margin-bottom: 25px !important;
+    }
+    .boxShadow {
+      box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+      height: 300px !important;
+      width: 400px !important;
+      background-color: white !important;
+    }
+  }
+  
+  .checkthis {
+    background-color: #33475b;
+    
+  }
+  .card111 {
+    border-radius: 25px !important;
+    background-image: linear-gradient(to right, #586872, #8b8bb9) !important;
+  }
+  .card111:hover {
+    background-image: linear-gradient(to right, #255574, #4a4a97) !important;
+    color: white;
+  }
+  .borderRightc {
+    border-right: 2px solid white;
+  }
+  
+  p {
+    font-size: 18px !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold !important;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .limitTextHeight {
+    height: 0;
+    overflow: hidden;
+  }

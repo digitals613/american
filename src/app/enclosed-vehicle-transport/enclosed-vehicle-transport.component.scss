@@ -1,0 +1,237 @@
+
+    .inner-banner-1 {
+        background: url('../../assets/images/enclose/enclosed\ vehicle\ service\ in\ us.jpg') no-repeat center;
+        background-size: cover;
+    box-shadow: 10px 10px 145px 220px rgb(0 0 0 / 78%) inset;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    height: 600px;
+    z-index: 1;
+    }
+    .row{
+        margin: 0;
+    }
+    .card{
+    padding: 0;
+    border: none;
+    img{
+        height: 185px;
+    }
+    .card-title{
+        font-weight: 600;
+    }
+    .card-text{
+        font-size: 14px;
+
+    }
+}
+p{
+    padding: 0;
+    font-size: 18px;
+    // letter-spacing: 1px;
+    color: #464646 !important;
+}
+a{
+    color: #000 !important;
+    font-weight: 600;
+}
+.new-head {
+    font-size: 28px!important;
+    font-weight: 600!important;
+}
+.Call{
+    color: #fff !important;
+}
+#btn-quote{
+    color: #fff !important;
+}
+.content-one{
+    text-align: center;
+    padding: 50px 0;
+    img{
+        width: 150px;
+    }
+    .each{
+        padding: 50px;
+    }
+    h5{
+        margin-top: 40px;
+    }
+}
+h5{
+    font-weight: 600;
+    font-size: 24px;
+}
+ul li{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    // letter-spacing: 1px;
+    line-height: 1.9;
+    color: #000;
+}
+a{
+    text-decoration: none;
+}
+.main_row{
+    text-align: center;
+    padding: 100px 0;
+}
+.each-one{
+    margin: 5px;
+    padding: 35px;
+    // border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 5px 30px 0 rgba(35,43,54,.3)
+}
+.pros-and-cons{
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    .content{
+        align-self: center;
+    }
+    
+    h3{
+        color: #e20074;
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 400px;
+            object-fit: contain;
+        }
+    }
+    .imagee{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 400px;
+            object-fit: fill;
+        }
+      
+    }
+}
+.vehicle-row{
+    padding-top: 50px;
+}
+.each-vehicle{
+    border-radius: 5px;
+    margin: 36px 5px;
+}
+.differences{
+    padding: 50px 0 0 0;
+}
+.second-row{
+    padding: 50px 0;
+}
+.types{
+    padding: 50px 0;
+    ul li{
+        padding: 20px;
+    }
+}
+.carrier{
+    padding-bottom: 50px ;
+    h2{
+        color: #e20074;
+    }
+    .each{
+        padding: 15px 0;
+    }
+}
+.each-img{
+    img{
+        width: 65px;
+        margin-bottom: 30px;
+    }
+}
+.pro-cons-open{
+    padding: 50px 0;
+}
+.opens, .door-cost{
+    padding-top: 50px;
+}
+.what-is-door{
+    background: url('../../assets/images/hero_home_01.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 450px;
+    box-shadow: 10px 10px 145px 220px rgb(0 0 0 / 78%) inset;
+}
+.door-content {
+    padding: 100px 20px;
+     h1{
+        color: #fff !important;
+    }
+    p{
+        color: #fff !important;
+        font-size: 16px;
+    }
+    
+}
+.what-is-car{
+    // background: url('../../assets/images/hero_home_01.jpg') no-repeat center;
+    // background-size: cover;
+    background-color: #99999954;
+    min-height: 350px;
+    // box-shadow: 10px 10px 145px 220px rgb(0 0 0 / 78%) inset;
+}
+.car-content {
+    padding: 70px 20px;
+    p{
+        color: #464646 !important;
+        font-size: 14px;
+    }
+}
+
+
+@media screen and  (max-width : 568px) {
+    .inner-banner-w3ls {
+        min-height: 250px;
+    }
+}
+@media(max-width: 1280px) {
+    
+}
+@media(max-width: 1080px) {
+   
+}
+@media(max-width: 991px) {
+    .vehicle-row{
+        padding-top: 0px;
+    }
+    #vehicle-row{
+        padding-top: 50px;
+    }
+    .main_row {
+        padding: 50px 0;
+    }
+} 
+@media screen and (max-width: 768px) {
+    .pros-and-cons{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pros-and-cons{
+        padding: 0 20px;
+        img{
+            width: 250px;
+        }
+    }
+    .carrier{
+        .each{
+            padding: 15px 20px;
+        }
+    }
+    .open,.pro-cons,.types{
+        padding: 0 30px;
+    }
+
+}

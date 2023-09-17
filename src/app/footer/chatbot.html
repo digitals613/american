@@ -1,0 +1,146 @@
+<!-- <h1 mat-dialog-title>Favorite Animal</h1> -->
+<div class="dialog">
+  <div class="head">
+    <p mat-dialog-title class="header">Let’s chat? - We're offline</p>
+    <button type="button" (click)="closeDialog()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div mat-dialog-content hasBackdrop="false" class="body">
+    <div>
+      <!-- <div> <p  class="date-time">Monday, 1:27 PM</p> </div> -->
+      <!-- <div class="chat-bubble you">Welcome to our site, if you need help simply reply to this message, we are online and ready to help.</div>
+      <div class="chat-bubble me">Hi, I am back</div>
+      <div class="chat-bubble me">I just want my Report Status.</div>
+      <div class="chat-bubble me">As i am not getting any weekly reports nowadays.</div>
+    </div> -->
+      <!-- <div>
+      <input type="text" placeholder="Type a message...">
+      <button >send</button>
+    </div> -->
+      <!-- My favorite animal is: -->
+      <!-- <ul>
+      <li>
+        <span *ngIf="data.animal === 'panda'">&#10003;</span> Panda
+      </li>
+      <li>
+        <span *ngIf="data.animal === 'unicorn'">&#10003;</span> Unicorn
+      </li>
+      <li>
+        <span *ngIf="data.animal === 'lion'">&#10003;</span> Lion
+      </li>
+    </ul> -->
+      <!-- <button (click)="closeDialog()">close</button> xzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz -->
+      <!-- <textarea id="chat-log" cols="100" rows="20"></textarea><br> -->
+      <!-- <input id="chat-message-input" type="text" size="100"><br> -->
+      <!-- <input id="chat-message-submit" type="button" value="Send"> -->
+      <div>
+        <p class="date">{{latest_date}}</p>
+        <p class="system">Welcome to our site, we are offline, if you need help please
+          email us at <a href="mailto:contact@americanautotransports.com" target="_blank">contact@americanautotransports.com</a> or contact us at <a href="tel:+1 (818) 760-5145">(818) 760-5145</a>.</p>
+      <!-- <p class="system">Welcome to our site, we are online, if you need help please provide the required information so that our agent can contact you.</p> -->
+        </div>
+        <!-- <div class="mx-3 text-center">
+          <button class="btn btn-primary" (click)="formshow()">Start Conversation</button>
+          <button class="btn btn-primary">Load Previous Chat</button>
+        </div> -->
+        <!-- <div class="w-100 px-3">
+          <form [formGroup]="form" *ngIf="formbtnn">
+              <mat-form-field class=" w-100">
+                <input matInput class="sh-text-capt" placeholder="Name" type="text"
+                  formControlName="name" maxlength="30" minlength="2" [(ngModel)]="name"
+                  required>
+                <mat-error *ngIf="form.controls.name.touched && form.controls.name.invalid">
+                  <mat-error *ngIf="form.controls.name.errors.required">
+                    Nickname cannot be empty
+                  </mat-error>
+                  <mat-error *ngIf="form.controls.name.errors.minlength">
+                    Nickname should be atleast 2 letters
+                  </mat-error>
+                  <mat-error
+                    *ngIf="form.controls.name.hasError('pattern') && !form.controls.name.errors.minlength">
+                    Nickname must be only in Alphabet
+                  </mat-error>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="w-100">
+                <input matInput placeholder="Email" class="email" name="email" [(ngModel)]="email" formControlName="email"
+                required>
+                  <mat-error *ngIf="signup.controls.emailFormControl.touched && signup.controls.emailFormControl.invalid">
+                <mat-error *ngIf="signup.controls.emailFormControl.hasError('pattern') && !invaliduser2">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="signup.controls.emailFormControl.errors.required">
+                  Email is required
+                </mat-error>
+                <mat-error *ngIf="signup.controls.emailFormControl.errors.maxlength">
+                  Maximum Length of Email can be 100 characters
+                </mat-error>
+                </mat-error>
+                <p *ngIf="invaliduser2 && model.email!=''" class="error">
+                  Email already exists
+                </p>
+              </mat-form-field>
+              
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Phone No" type="text" name="phone" [(ngModel)]="phone" required
+                formControlName="phone" (keyup)="getPhone()" [textMask]="{mask: phoneMask}" (change)=change2($event)>
+                <mat-error *ngIf="form.controls.phone.touched && signup.controls.phone.invalid">
+              <mat-error *ngIf="form.controls.phone.errors.required">
+                Phone Number is required
+              </mat-error>
+              </mat-error>
+              <p class="error" *ngIf="isInvalid && mobile!=''">Enter valid phone number</p>
+            </mat-form-field>
+            <div class="text-center">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div> -->
+    </div>
+    <!-- <div class="footer">
+      <input class="input" type="text" name="message" placeholder="Type a message...">
+      <i class="fa fa-paper-plane" aria-hidden="true"></i>
+    </div> -->
+
+    <!-- {{ room_name|json_script:"room-name" }} -->
+    <!-- <script>
+      const roomName = 'aa';
+
+      const chatSocket = new WebSocket(
+          'ws://'
+          + window.location.host
+          + '/ws/chat/'
+          + roomName
+          + '/'
+      );
+
+      chatSocket.onmessage = function(e) {
+          const data = JSON.parse(e.data);
+          document.querySelector('#chat-log').value += (data.message + '\n');
+      };
+
+      chatSocket.onclose = function(e) {
+
+          console.error('Chat socket closed unexpectedly',e);
+      };
+
+      document.querySelector('#chat-message-input').focus();
+      document.querySelector('#chat-message-input').onkeyup = function(e) {
+          if (e.keyCode === 13) {  // enter, return
+              document.querySelector('#chat-message-submit').click();
+          }
+      };
+
+      document.querySelector('#chat-message-submit').onclick = function(e) {
+          const messageInputDom = document.querySelector('#chat-message-input');
+          const message = messageInputDom.value;
+          chatSocket.send(JSON.stringify({
+              'message': message
+          }));
+          messageInputDom.value = '';
+      };
+  </script> -->
+  </div>

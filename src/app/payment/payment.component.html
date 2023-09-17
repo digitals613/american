@@ -1,0 +1,225 @@
+<div class="main">
+  <h1>American Auto Transports Shipping Payment</h1>
+  <div class="checkout">
+    <div class="credit-card-box">
+      <div class="flip">
+        <div class="front">
+          <div class="chip"></div>
+          <div class="logo">
+            <svg version="1.1" id="visa" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="47.834px" height="47.834px"
+              viewBox="0 0 47.834 47.834" style="enable-background:new 0 0 47.834 47.834;">
+            </svg>
+          </div>
+          <div class="card-number">
+            <label>Cardholder Name</label>
+            <div>{{form.controls.cardnickname.value}}</div>
+          </div>
+          <div class="card-holder">
+            <label>Card Number</label>
+            <div *ngIf="cardType=='Mastercard'">{{form.controls.cardnumber.value}}</div>
+            <div *ngIf="cardType=='Discover'">{{form.controls.cardnumber.value}}</div>
+            <div *ngIf="cardType=='Visa'">{{form.controls.cardnumber.value}}</div>
+            <div *ngIf="cardType=='AmericanExpress'">{{form.controls.cardnumber2.value}}</div>
+          </div>
+          <div class="card-expiration-date">
+            <label>Expiry Date</label>
+            <div>{{form.controls.expirydate.value}}</div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="strip"></div>
+          <div class="logo">
+            <svg version="1.1" id="visa" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="47.834px" height="47.834px"
+              viewBox="0 0 47.834 47.834" style="enable-background:new 0 0 47.834 47.834;">
+              <g>
+                <g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="card-expiration-date">
+            <label>Expiry Date</label>
+            <div>{{form.controls.expirydate.value}}</div>
+          </div>
+          <div class="ccv">
+            <label>CVV</label>
+            <div>{{form.controls.ccv.value}}{{form.controls.ccv2.value}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-padding">
+      <form class="sh-signup-form-fix edit-profile" [formGroup]="form2"  #f="ngForm">
+        <div class="row  p-0 selectlist-payment " [ngClass]="displayFieldCss(form2, 'var_type_atm')">
+          <mat-form-field class="col-sm-6">
+            <input matInput type="text" placeholder="Order Id" [(ngModel)]="order_id"
+            formControlName="order_id" (keyup.enter)="getFee()">
+            <mat-error *ngIf="form2.controls.order_id?.invalid && form2.controls.order_id?.touched">
+              <mat-error *ngIf="form2.get('order_id')?.hasError('required')">
+                Order id is required
+              </mat-error>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-sm-6 position-relative">
+            <span class="pricee">$</span>
+            <input matInput type="text"  placeholder="Fee" [(ngModel)]="fee"
+            formControlName="fee">
+          </mat-form-field>
+          <mat-form-field class="col-sm-6">
+            <mat-select placeholder="Card Type" formControlName="var_type_atm" #val [(ngModel)]="cardType"
+              (valueChange)="ShowButton(val.value)" (selectionChange)="onSelectionChanged($event.value)" required>
+              <mat-option style="font-size: 16px;" *ngFor="let card_get_datat of card_option"
+                [value]="card_get_datat.value">{{card_get_datat.viewValue}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="form2.controls.var_type_atm.errors?.required">
+              Select card type
+            </mat-error>
+          </mat-form-field>
+        </div>
+          
+      </form>
+      <form class="floting-label sh-signup-form-fix edit-profile" [formGroup]="form"   #f="ngForm">
+        <div class="row ">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngIf="cardnumber"
+            [ngClass]="displayFieldCss(form, 'cardnumber')">
+            <mat-form-field class="w-100">
+              <input matInput type="text" [textMask]="{mask: cardsmask}"
+                placeholder="16 digits Credit Card Number" formControlName="cardnumber" (change)=change($event)
+                [(ngModel)]="card_no" required>
+
+              <mat-error *ngIf="form.controls.cardnumber.touched && form.controls.cardnumber.invalid">
+                <mat-error *ngIf="form.controls.cardnumber.errors.required">
+                  Card number cannot be empty
+                </mat-error>
+                <mat-error *ngIf="form.controls.cardnumber.hasError('pattern')">
+                  Card number must be only in digits
+                </mat-error>
+                <!-- <mat-error *ngIf="cardexist">
+                  This Card Number already exist
+                </mat-error> -->
+              </mat-error>
+              <p class="error" *ngIf="isInvalid && cardnumber && card_no!=''">Enter valid credit card
+                number</p>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngIf="cardnumber2"
+            [ngClass]="displayFieldCss(form, 'cardnumber2')">
+            <mat-form-field class="w-100">
+              <input matInput type="text" placeholder="15 digits Credit Card Number"
+                [textMask]="{mask: cardmask}" formControlName="cardnumber2" (change)=change2($event)
+                [(ngModel)]="card_no" required>
+              <mat-error *ngIf="form.controls.cardnumber2.touched && form.controls.cardnumber2.invalid">
+                <mat-error *ngIf="form.controls.cardnumber2.errors.required">
+                  Card number cannot be empty
+                </mat-error>
+                <mat-error *ngIf="form.controls.cardnumber2.hasError('pattern')">
+                  Card number must be only in digits.
+                </mat-error>
+                <!-- <mat-error *ngIf="cardexist">
+                  This Card Number already exist.
+                </mat-error> -->
+              </mat-error>
+              <p class="error" *ngIf="isInvalid2 && cardnumber2 && card_no2!=''">Enter valid credit
+                card number</p>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngIf="ccv"
+            [ngClass]="displayFieldCss(form, 'ccv')">
+            <mat-form-field class="w-100">
+              <input matInput type="password" maxlength="3" minlength="3" placeholder="CVV No."
+                formControlName="ccv" required [(ngModel)]="cvv">
+              <mat-error *ngIf="form.controls.ccv.touched && form.controls.ccv.invalid">
+                <mat-error *ngIf="form.controls.ccv.errors.required">
+                  CVV No cannot be empty
+                </mat-error>
+                <mat-error *ngIf="form.controls.ccv.errors.minlength">
+                  CVV No must be atleast {{form.controls.ccv.errors.minlength.requiredLength}} digits long.
+                </mat-error>
+                <mat-error *ngIf="form.controls.ccv.hasError('pattern') && !form.controls.ccv.errors.minlength">
+                  CVV No must be only in digits.
+                </mat-error>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngIf="ccv2"
+            [ngClass]="displayFieldCss(form, 'ccv2')">
+            <mat-form-field class="w-100">
+              <input matInput type="password" maxlength="4" minlength="4" placeholder="CVV No."
+                [(ngModel)]="ccv" formControlName="ccv2" required>
+              <mat-error *ngIf="form.controls.ccv2.touched && form.controls.ccv2.invalid">
+                <mat-error *ngIf="form.controls.ccv2.errors.required">
+                  CVV cannot be empty
+                </mat-error>
+                <mat-error *ngIf="form.controls.ccv2.errors.minlength">
+                  CVV must be atleast {{form.controls.ccv2.errors.minlength.requiredLength}} digits long.
+                </mat-error>
+                <mat-error
+                  *ngIf="form.controls.ccv2.hasError('pattern') && !form.controls.ccv2.errors.minlength">
+                  CVV must be only in digits.
+                </mat-error>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pos-rel"
+            [ngClass]="displayFieldCss(form, 'expirydate')">
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Expiry Date (MM/YY) *" [(ngModel)]="expirydate_date"
+                [textMask]="{mask: mask}" type="text" formControlName="expirydate" #exp
+                (change)="chek(exp.value)">
+
+              <mat-error *ngIf="form.controls.expirydate.touched && form.controls.expirydate.invalid">
+                <mat-error *ngIf="form.controls.expirydate.errors.required">
+                  Expiry date cannot be empty
+                </mat-error>
+                <mat-error *ngIf="form.controls.expirydate.hasError('pattern')">
+                  Expiry date must be in MM/YY format.
+                </mat-error>
+              </mat-error>
+              <p *ngIf="expirydatee <= '22' && form.controls.expirydate.value!='' && !form.controls.expirydate.hasError('pattern')"
+              class="error">
+              Invalid Expiry Date
+            </p>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" [ngClass]="displayFieldCss(form, 'cardnickname')">
+            <mat-form-field class="w-100">
+              <input matInput class="sh-text-capt" type="text" placeholder="Cardholder Name" maxlength="30"
+                formControlName="cardnickname" [(ngModel)]="cardholdername" required>
+              <mat-error *ngIf="form.controls.cardnickname.touched && form.controls.cardnickname.invalid">
+                <mat-error *ngIf="form.controls.cardnickname.errors.required">
+                  Cardholder Name cannot be empty
+                </mat-error>
+                <mat-error *ngIf="form.controls.cardnickname.errors.minlength">
+                  Cardholder Name must be atleast {{form.controls.cardnickname.errors.minlength.requiredLength}}
+                  characters
+                  long
+                </mat-error>
+                <mat-error
+                  *ngIf="form.controls.cardnickname.hasError('pattern') && !form.controls.cardnickname.errors.minlength">
+                  Cardholder Name must be only in Alphabet.
+                </mat-error>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="btnn">
+            <button class="btn w3ls-btn" (click)="payNow()" >Pay Now</button>
+          </div>
+          <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 enroll-chckbox mt-2 ">
+            <mat-slide-toggle value="setautopay" (change)="changed($event)" checked="true">Enroll in Autopay -
+              Set this card as recurring payment method</mat-slide-toggle>
+          </div> -->
+          <!-- <div class="text-center w-100">
+            <button class="btn btn-rose mt-2 w-30 p-1" (click)="add(f)">Add</button>
+          </div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: #fff!important; margin-top:50px" > Payment Processing... </p></ngx-spinner>

@@ -1,0 +1,86 @@
+p {
+    font-size: 18px;
+  }
+  
+  .icons {
+    width: 40px;
+    height: 40px;
+  }
+  a {
+      text-decoration: none;
+      color: #000000;
+  }
+  .bgCOLOR1 {
+    border: none;
+    background: #e20074;
+    color: #fff;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 0;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    -moz-border-radius: 0;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  
+  .text-dark {
+    color: #000000 !important;
+  }
+  
+  .wColor {
+    background-color: whitesmoke !important;
+  }
+  
+  .marginn {
+    margin-top: 50px !important;
+  }
+  
+  .whColor {
+    background-color: white !important;
+  }
+  
+  .img1 {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+  .img3 {
+    width: 90%;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: -20%;
+  }
+  .img55 {
+    width: 60%;
+    margin-top: -130px !important;
+    margin-bottom: 30px;
+  }
+  .img6 {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+  .footerimg {
+    margin-top: -91px;
+    animation: 1s ease-out 0s 1 normal none running enterLeft;
+    width: 100%;
+    max-width: 300px;
+    max-height: 160px;
+  }
+  .footer {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+  }
+  
+  .marginc {
+    margin-bottom: 100px;
+  }

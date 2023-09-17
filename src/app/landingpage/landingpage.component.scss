@@ -1,0 +1,381 @@
+body{
+    font-family: 'Roboto' sans-serif !important;
+}
+.navbar{
+    background: transparent;
+   background-color:  rgba(0, 0, 0, 0.3);
+}
+
+.S-FORM{
+    display: flex;
+    justify-content: end; 
+}
+.call-btn{
+    background-color: #00a431;
+    color: #fff;
+        padding: 9px 35px;
+        // letter-spacing: 1px;
+        font-size: 20px;
+        border-radius: 20px;
+        font-weight: 500;
+ }
+ .call-btn:focus{
+    box-shadow: none;
+ }
+
+.logoimg {
+    width: 270px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.form-control::placeholder{
+    font-size: 13px;
+}
+.form-control{
+    font-size: 13px;
+}
+.heading{
+    font-size: 34px;
+}
+.f-20{
+    font-size: 20px;
+}
+ label {
+    color: #000;
+    font-size: 14px !important;
+}
+.home-banner-w3{
+    color: #fff;
+}
+.bg-banner{
+    background: url('../../assets/images/banners/main-banner.jpg') center no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 600px;
+}
+.form .col-lg-6{
+    padding: 0 120px;
+}
+.mr-3{
+    margin-right: 10px;
+}
+.formbutton{
+    opacity: 1;
+    padding: 10px;
+    background: #e20074 !important;
+    color: #fff;
+    margin-top: 0.5em;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    border-radius: 5px;
+}
+.formBtn {
+    padding: 0 10px;
+}
+h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif !important;
+}
+.hd1 {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+} 
+.booking-form{
+    width: 350px;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 5px;
+}
+.booking-form1{
+    width: 450px;
+    background: #f3f3f3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    h6{
+        color: rgb(60, 8, 128);
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+// h5{
+//     color: #000;
+//     text-transform: uppercase;
+//     font-size: 20px;
+//     padding-bottom: 10px;
+// }
+.Ratingg .fa-star {
+    color: #FDCC0D;
+}
+span{
+    color: #e20074;
+}
+.single_grid_w3_main{
+    border-radius: 5px;
+    padding: 14px 16px 14px 48px;
+}
+.abt-icon span.fa{
+    background: #e20074;
+    font-size: 32px;
+    color: white !important;
+    padding: 12px;
+    border-radius: 49px;
+}
+.abt-icon {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.abt-icon, .abt-icons span {
+    font-size: 2.7em;
+    color: #e20074;
+}
+.container-icon-title-text{
+    position: relative;
+    display: block;
+}
+.second-row {
+    margin-top: 25px;
+}
+.slide_text p {
+    font-size: 16px !important;
+    font-weight: 500;
+}
+.card{
+    border: solid 1px #e2e6ec;
+    cursor: pointer;
+    overflow: hidden;
+    height: 170px;
+}
+.card:hover {
+    box-shadow: 0 5px 30px 0 rgb(35 43 54 / 15%);
+}
+.card-title{
+    color: #000;
+}
+.card-text{
+    color: #464646;
+    font-size: 14px;
+}
+.container-icon-title-text.with-border {
+    border: 1px solid #9999997a;
+    border-radius: 5px;
+    padding: 14px 16px 14px 48px;
+    margin: 0 20px !important;
+}
+.container-icon-title-text .container-icon-text .child-icon.is-absolute {
+    width: 84px;
+    height: 84px;
+    padding: 8px;
+    background-color: #ffff;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form .booking-form span {
+    padding: 0 10px;
+}
+.form .form-group {
+    width: 100%;
+}
+.form{
+    height: 520px;
+    display: flex;
+    align-content: center;
+}
+.looking {
+    background: linear-gradient(#ffffff59, rgb(255 255 255 / 0%)), url('../../assets/images/truks-image.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 250px 250px 250px 250px #0000009e inset;
+    padding: 1em 0;
+}
+.yellow{
+   color: #FDCC0D;
+   font-weight:600;
+}
+.f-20{
+    font-size: 20px;
+}
+.looking h3 {
+    font-size: 30px;
+    color: #fff !important;
+}
+.looking p {
+    font-size: 16px !important;
+    color: #fff !important;
+    margin: 0;
+}
+.looking-btn {
+    align-self: center;
+    text-align: center;
+}
+.quote {
+    border: none;
+    background: #e20074;
+    color: #fff;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 30px !important;
+}
+.quote:hover{
+    color: #fff;
+}
+.Call {
+    border: 2px solid #00a431;
+    background: #00a431;
+    color: #fff;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.text-primary{
+    color: #e20074 !important;
+    font-weight: 600;
+}
+.looking a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+.cpy-right {
+    padding: 1vw;
+    background: #1d1d1d;
+    color: #fff;
+}
+ul li{
+    list-style-type: none;
+
+    i{
+        font-size: 25px;
+        padding: 0 5px;
+        color: #e20074;
+    }
+}
+.how-main11 h5{
+    text-transform: capitalize;
+}
+@media (max-width:1100px){
+    .bg-banner{
+        height: 700px;
+    }
+    .form{
+        margin-top: 0;
+        .col-lg-6{
+            padding: 0 35px;
+        }
+    }
+    .S-FORM{
+        display: flex;
+        justify-content: end; 
+    }
+    .container-icon-title-text.with-border{
+        margin-bottom: 10px !important;
+        margin-top: 10px !important;
+    }
+    .second-row {
+        margin-top: 10px;
+    }
+    .looking{
+         h3{
+             font-size: 24px;
+         }
+        p{
+        font-size: 14px;
+        }
+    }
+    .quote{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:991px){
+    .form{
+        margin-top:unset ;
+    }
+    .form .booking-form span {
+        padding: 0 4px;
+    }
+    .how-main11{
+        padding-top: 20px;
+    }
+}
+@media (max-width:576px){
+    .permotion{
+        display: none;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .bg-banner{
+        height: 700px;
+    }
+    .navbar .container-fluid{
+        justify-content: center;
+    }
+    .card{
+        margin-bottom: 10px;
+    }
+}
+
+
+// All services
+.mt-75{
+    margin-top: 75px;
+}
+.bg-services {
+    background: linear-gradient(#ffffff59, rgb(255 255 255 / 0%)), url('../../assets/images/truks-image.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 10px 10px 145px 220px rgb(0 0 0 / 78%) inset;
+    height: 200px;
+}
+.ALGN{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.card-img-top{
+    width: 140px !important;
+    align-self: center;
+}
+.card-title{
+    margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: 700;
+}
+.col-sm-4{
+    margin-bottom: 20px;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    height: 230px;
+}
+.card:hover{
+    box-shadow: 0 5px 25px 0 rgb(64 64 64 / 30%);
+    transform: scale(1.05);
+}
+.card-body{
+    padding: 0.5rem !important;
+}
+.card-text{
+    font-size: 14px !important;
+    line-height: unset;
+}
+label {
+    color: #000;
+    font-size: 14px !important;
+}

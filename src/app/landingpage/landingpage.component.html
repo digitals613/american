@@ -1,0 +1,628 @@
+<div class="bg-banner">
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="../../assets/images/banners/logo-white.png" alt="" class="logoimg"></a>
+            <!-- <form class="d-flex">
+                <a class="btn call-btn" type="submit" href="tel:+1 972-924-0368"><i class="fa fa-phone"></i> 972-924-0368</a>
+            </form> -->
+        </div>
+    </nav>
+    <div class="row form w-100" id="form">
+        <div class="col-lg-6 col-md-6 align-items-center permotion">
+            <div class="slide_text" *ngIf="!singleForm">
+                <div class="home-banner-w3">
+                    <h3 class="text-white m-0">Top-Rated</h3>
+                    <h1 class="text-white f-40">Car Shippers</h1>
+                </div>
+                <p class="m-0 text-white">So save yourself a headache! With American Auto Transports.
+                    No deposit is charged until your car is loaded on our truck,
+                    and no final balance is due until we deliver your vehicle.
+            </div>
+            <div class="slide_text" *ngIf="singleForm">
+                <div class="home-banner-w3">
+                    <h3 class="text-white m-0">Nationwide Auto</h3>
+                    <h1 class="text-white f-40">Transport Company</h1>
+                </div>
+                <p class="m-0 f-20 text-white"> <span class="yellow"><i class="fa fa-check"></i> 724,924+</span>
+                    Vehicles delivered </p>
+                <p class="m-0 f-20 text-white"> <span class="yellow"><i class="fa fa-check"></i> 14+ Years</span>
+                    Experience </p>
+                <p class="m-0 f-20 text-white"> <span class="yellow"><i class="fa fa-check"></i> 624,353+</span>
+                    Satisfied customers </p>
+                <p class="m-0 f-20 text-white"> <span class="yellow"><i class="fa fa-check"></i> Fast And
+                        Efficient</span> Transport </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 S-FORM align-self-center" *ngIf="!singleForm">
+            <div class="booking-form">
+                <h5>get an instant quote</h5>
+                <form [formGroup]="requestBookingForm1" *ngIf='booking1 == true && !verifyToKen'>
+                    <div class="form-row">
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Pickup Address/Zip Code</label>
+                                <input matInput class="form-control" [(ngModel)]="pick_up" formControlName="pick_up"
+                                    placeholder="Enter pickup zip code" matGoogleMapsAutocomplete
+                                    (onAutocompleteSelected)="onAutocompleteSelected($event)"
+                                    (onLocationSelected)="onLocationSelected($event)">
+                            </div>
+                        </div>
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Drop off Address/Zip Code</label>
+
+                                <input matInput class="form-control" [(ngModel)]="drop_off" formControlName="drop_off"
+                                    placeholder="Enter drop off zip code" matGoogleMapsAutocomplete
+                                    (onAutocompleteSelected)="onAutocompleteSelected($event)"
+                                    (onLocationSelected)="onLocationSelected($event)">
+                            </div>
+                        </div>
+                        <div class="displays">
+                            <div class="form-group">
+                                <label id="label">Type of service</label>
+                                <span>
+                                    <input type="radio" id="open" value="Open" formControlName="service"
+                                        (change)="typeService($event)" name="service"> <label for="open">Open</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="enclosed" (change)="typeService($event)"
+                                        formControlName="service" name="service" value="Enclosed"><label
+                                        for="enclosed">Enclosed</label>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="formBtn">
+                            <button class="btn w3ls-btn formbutton" (click)="book1()"
+                                [disabled]="!requestBookingForm1.valid">Vehicle details &nbsp; <i
+                                    class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                        </div>
+                    </div>
+                </form>
+
+                <form [formGroup]="requestBookingForm2" *ngIf='booking2 == true && !verifyToKen'>
+                    <div class="form-row">
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Vehicle Year</label>
+                                <input type="text" class="form-control" placeholder="Vehicle Year" [(ngModel)]="year"
+                                    formControlName="year">
+
+                            </div>
+                        </div>
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Vehicle Make</label>
+                                <input type="text" class="form-control" placeholder="Vehicle Make" [(ngModel)]="make"
+                                    formControlName="make">
+
+                            </div>
+                        </div>
+
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Vehicle Model</label>
+                                <input type="text" class="form-control" placeholder="Vehicle Model" [(ngModel)]="moodel"
+                                    formControlName="model">
+
+                            </div>
+                        </div>
+
+                        <div class="displays">
+                            <div class="form-group">
+                                <label id="label">Does your vehicle run?</label>
+                                <span>
+                                    <input type="radio" id="yes" value="Open" formControlName="run"
+                                        (change)="vehicleRun($event)" name="run"> <label for="open">Yes</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="no" (change)="vehicleRun($event)" formControlName="run"
+                                        name="run" value="Enclosed"><label for="enclosed">No</label>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="formBtn">
+                            <button class="btn w3ls-btn formbutton" (click)="book2()"
+                                [disabled]="!requestBookingForm2.valid">Confirmation details &nbsp; <i
+                                    class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                        </div>
+                    </div>
+                </form>
+
+                <form [formGroup]="requestBookingForm3" *ngIf='booking3 == true && !verifyToKen'>
+                    <div class="form-row">
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Pickup Date</label>
+                                <input type="date" class="form-control" [(ngModel)]="pick_up_date"
+                                    formControlName="pick_up_date">
+                            </div>
+                        </div>
+
+
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" placeholder="Enter name" [(ngModel)]="name"
+                                    formControlName="name" minlength="4">
+
+                            </div>
+                        </div>
+
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control" placeholder="Enter Phone no" [(ngModel)]="phone"
+                                    formControlName="number" [textMask]="{mask: phoneMask}">
+                            </div>
+                        </div>
+
+                        <div class="displays">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" placeholder="Enter email" [(ngModel)]="email"
+                                    formControlName="email">
+                            </div>
+                        </div>
+
+
+
+                        <div class="formBtn">
+                            <button class="btn w3ls-btn formbutton" (click)="sendCode()"
+                                [disabled]="!requestBookingForm3.valid">SEND </button>
+                        </div>
+                    </div>
+                </form>
+                <form [formGroup]="verifyForm" *ngIf="verifyToKen">
+                    <div class="displays">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter verification code"
+                                formControlName="verifying" [(ngModel)]="verifyNumber" required>
+
+                        </div>
+                        <div class="formBtn">
+                            <button class="btn w3ls-btn formbutton" (click)="back()">Back </button>
+                            <button class="btn w3ls-btn formbutton" (click)="verifyCode()"
+                                [disabled]="!verifyForm.valid">Verify </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 S-FORM align-self-center" *ngIf="singleForm">
+            <div class="booking-form1">
+                <div class="text-center">
+                    <h5>Get an instant Quote</h5>
+                </div>
+                <form action="" [formGroup]="requestBookingForm" *ngIf="!verifyToKen">
+                    <div class="d-flex mb-2">
+                        <label for="Pickup" class="form-label m-0 w-50 align-self-center">Pickup Zip Code</label>
+                        <input type="text" class="form-control py-1" [(ngModel)]="pick_up" formControlName="pick_up"
+                            placeholder="Enter pickup zip code" matGoogleMapsAutocomplete
+                            (onAutocompleteSelected)="onAutocompleteSelected($event)"
+                            (onLocationSelected)="onLocationSelected($event)">
+                    </div>
+                    <div class="d-flex mb-2">
+                        <label for="Delivery" class="form-label m-0 w-50 align-self-center">Drop off Zip Code</label>
+                        <input type="text" class="form-control py-1" [(ngModel)]="drop_off" formControlName="drop_off"
+                            placeholder="Enter drop off zip code" matGoogleMapsAutocomplete
+                            (onAutocompleteSelected)="onAutocompleteSelected($event)"
+                            (onLocationSelected)="onLocationSelected($event)">
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="open" value="Open"
+                                formControlName="service" (change)="typeService($event)" name="service">
+                            <label class="form-check-label" for="open">Open Transport</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" d="enclosed" (change)="typeService($event)"
+                                formControlName="service" name="service" value="Enclosed">
+                            <label class="form-check-label" for="enclosed">Enclosed Transport</label>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <label class="form-label m-0 w-50 align-self-center">Vehicle Year</label>
+                        <input type="text" class="form-control  py-1" placeholder="Vehicle Year" [(ngModel)]="year"
+                            formControlName="year">
+                    </div>
+                    <div class="d-flex mb-2">
+                        <label class="form-label m-0 w-50 align-self-center">Vehicle Make</label>
+                        <input type="text" class="form-control  py-1" placeholder="Vehicle Make" [(ngModel)]="make"
+                            formControlName="make">
+                    </div>
+                    <div class="d-flex mb-2">
+                        <label class="form-label m-0 w-50 align-self-center">Vehicle Model</label>
+                        <input type="text" class="form-control  py-1" placeholder="Vehicle Model" [(ngModel)]="moodel"
+                            formControlName="model">
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="yes" value="Open" formControlName="run"
+                                (change)="vehicleRun($event)" name="run">
+                            <label class="form-check-label" for="open">Running Condition</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="no" (change)="vehicleRun($event)"
+                                formControlName="run" name="run" value="Enclosed">
+                            <label class="form-check-label" for="enclosed">Non-Running Condition</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="d-flex mb-2">
+                            <label class="form-label m-0 w-50 align-self-center">Pickup Date</label>
+                            <input type="date" class="form-control py-1" [(ngModel)]="pick_up_date"
+                                formControlName="pick_up_date">
+                        </div>
+                        <div class="d-flex mb-2">
+                            <label class="form-label m-0 w-50 align-self-center">Name</label>
+                            <input type="text" class="form-control py-1" placeholder="Enter name" [(ngModel)]="name"
+                                formControlName="name" minlength="4">
+                        </div>
+                        <div class="d-flex mb-2">
+                            <label class="form-label m-0 w-50 align-self-center">Phone Number</label>
+                            <input type="text" class="form-control py-1" placeholder="Enter Phone no"
+                                [(ngModel)]="phone" formControlName="number" [textMask]="{mask: phoneMask}">
+                        </div>
+                        <div class="d-flex mb-2">
+                            <label class="form-label m-0 w-50 align-self-center">Email</label>
+                            <input type="email" class="form-control py-1" placeholder="Enter email" [(ngModel)]="email"
+                                formControlName="email">
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn w3ls-btn formbutton" (click)="sendCode()"
+                            [disabled]="!requestBookingForm.valid">SEND</button>
+                    </div>
+                </form>
+                <form [formGroup]="verifyForm" *ngIf="verifyToKen">
+                    <div class="displays">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter verification code"
+                                formControlName="verifying" [(ngModel)]="verifyNumber" required>
+
+                        </div>
+                        <div class="formBtn">
+                            <button class="btn w3ls-btn formbutton" (click)="back()">Back </button>
+                            <button class="btn w3ls-btn formbutton" (click)="verifyCode()"
+                                [disabled]="!verifyForm.valid">Verify </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<section class="choose-criteria">
+    <div class="container-fluid">
+        <div class="col-lg-5 col-md-7 col-sm-6 pd-0-i col-xs-12">
+            <h4 class="hd1">Flash Sale - 35% Off only for a limited time.</h4>
+            <h4 class="hd1">Take advantage of this incredible offer NOW </h4>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-6 pd-0-i col-xs-12 abc">
+            <countdown class="mainpagee1 pop-modal pd-0-i pop-up-timer1" [text]="text"
+                units=" Days | Hours | Minutes | Seconds" [end]="getTime"> </countdown>
+        </div>
+        <div class="looking-btn col-lg-3 col-md-12 col-sm-12 col-xs-12  text-center subsBtn">
+            <button (click)="gerQuote()" class="btn quote mr-3 mb-2" id="btn-quote"> Get A Quote
+            </button>
+            <!-- <a class="btn Call" id="btn-quote" href="tel:+1 972-924-0368"> <i class="fa fa-phone"></i>972-924-0368
+			</a> -->
+        </div>
+    </div>
+</section>
+<section class="py-4">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="heading text-capitalize">We have more than 200k <br> reliable carriers in our arsenal</h2>
+        </div>
+
+        <div class="row single_blog mt-4">
+            <div class="col-lg-3 single_blong_in text-center">
+                <h3 class="text-primary">15k</h3>
+                <p>Vehicles Delivered</p>
+            </div>
+            <div class="col-lg-3 single_blong_in text-center">
+                <h3 class="text-primary">4.9</h3>
+                <p>Overall Customer Rating</p>
+            </div>
+            <div class="col-lg-3 single_blong_in text-center">
+                <h3 class="text-primary">10k+</h3>
+                <p>Happy Customers</p>
+            </div>
+            <div class="col-lg-3 text-center">
+                <h3 class="text-primary">16+</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="single_grid_w3_main py-4" id="reviews">
+    <app-reviews></app-reviews>
+</section>
+<div class="container">
+    <h2 class="heading text-center">Services</h2>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/Open Vehicle Transport.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Open Vehicle Transport</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/enclosed-auto transport.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Enclosed Vehicle Transport</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/Door-to-door-auto-transport.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Door To Door Auto Transport</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/car shipping services.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Car Shipping Service</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/Snowbird-auto-transport.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Snowbird Auto Transport</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/Multiple Vehicles Transport.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Multiple Vehicles Transport</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/Vehicle Shipping Across Country.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Vehicle Shipping Across Country</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/car-shipping-cost.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Vehicle Shipping Cost</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/boat transportation services.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Boat Transportation Services</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/inoperable-car-transport.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">InOperable Auto Transport</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/Motorcycle-Shipping.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Motorcycle Transportation Services</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="../../assets/images/final icons/vintage-and-classica.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Vintage & Classic Vehicle Transport</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="single_grid_w3_main align-w3-abt" id="about">
+    <div class="container">
+        <div class="wthree_pvt_title text-center">
+            <h4 class="heading">Why choose American Auto Transports for open car shipping?</h4>
+        </div>
+        <div class="row justify-content-center" id="rows">
+            <div class="container-icon-title-text js-container-toggle with-border  is-open col-lg-5 my-lg-0 my-4"
+                id="container-icon-title-text">
+                <div class="part-text-icon">
+                    <div class="container-icon-text">
+                        <span class="child-icon is-absolute">
+                            <div class="abt-icon">
+                                <span class="fa fa-shield"></span>
+                            </div>
+                        </span>
+                        <h4 class="is-subheader text-capitalize f-20">Trusted network of carriers</h4>
+                    </div> <i class="icon-keyboard_arrow_right with-icon"></i>
+                </div>
+                <p class="part-text text-body">All of our carriers are choosen because of their deidcation to high
+                    quality service standards. This allow us to find the best quality carriers to ship a car very
+                    quickly.</p>
+            </div>
+            <div class="container-icon-title-text js-container-toggle with-border col-lg-5  my-lg-0 my-4"
+                id="container-icon-title-text">
+                <div class="part-text-icon">
+                    <div class="container-icon-text"> <span class="child-icon is-absolute">
+                            <div class="abt-icon">
+                                <span class="fa fa-dollar"></span>
+                            </div>
+                        </span>
+                        <h4 class="is-subheader text-capitalize f-20">Best prices</h4>
+                    </div> <i class="icon-keyboard_arrow_right with-icon"></i>
+                </div>
+                <p class="part-text text-body">We always offer the best car shipping prices possible. Our smart online
+                    calculator determines all factors to get you all the fairest and accurate open car transport cost as
+                    possible. </p>
+            </div>
+        </div>
+        <div class="row second-row justify-content-center" id="rows">
+            <div class="container-icon-title-text js-container-toggle with-border col-lg-5 my-lg-0 my-4"
+                id="container-icon-title-text">
+                <div class="part-text-icon">
+                    <div class="container-icon-text"> <span class="child-icon is-absolute">
+                            <div class="abt-icon">
+                                <span class="fa fa-ban"></span>
+                            </div>
+                        </span>
+                        <h4 class="is-subheader text-capitalize f-20">No upfront payment</h4>
+                    </div> <i class="icon-keyboard_arrow_right with-icon"></i>
+                </div>
+                <p class="part-text text-body">As mentioned above, most auto transport companies (the ones you want to
+                    book with, at least) charge you once the carrier has been dispatched for your order. This means
+                    you’ll be able to book your open auto transport now and worry about the bill later.</p>
+            </div>
+            <div class="container-icon-title-text js-container-toggle with-border col-lg-5 my-lg-0 my-4"
+                id="container-icon-title-text">
+                <div class="part-text-icon">
+                    <div class="container-icon-text"> <span class="child-icon is-absolute">
+                            <div class="abt-icon">
+                                <span class="fa fa-user-o"></span>
+                            </div>
+                        </span>
+                        <h4 class="is-subheader text-capitalize f-20">Friendly customer service</h4>
+                    </div> <i class="icon-keyboard_arrow_right with-icon"></i>
+                </div>
+                <p class="part-text text-body">Our representatives are always friendly and helpful. They will make sure
+                    that you have an excellent experience from start to finish.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="looking position-relative" id="looking">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h3>Looking for the best transportation services?</h3>
+                        <p>Our federally licensed, 5-star transport service ships door-to-door for most destinations,
+                            and we work with more than 100,000+ reliable auto carriers & trucking companies.</p>
+                    </div>
+                    <!-- <div class="col-lg-6"><button class="btn quote">Get Quote</button></div> -->
+                    <div class="looking-btn col-lg-5">
+                        <button class="btn quote mr-3 mb-2" id="btn-quote" (click)="getQuote()"> Get A Quote
+                        </button>
+                        <!-- <a class="btn Call" id="btn-quote" href="tel:+1 972-924-0368"><i class="fa fa-phone"></i>972-924-0368</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wthree-slie-btm py-lg-5" id="more">
+    <div class="container-fluid how-main">
+        <div class="row m-0">
+
+            <div class="col-lg-6 mt-lg-0 mt-4">
+                <div class="container mt-5">
+                    <div class="wthree_pvt_title">
+                        <span class="sub-title">American Auto Transports</span>
+                        <h4 class="heading">Will Safely Ship & Transport Your Vehicle Anytime, <br> Anywhere Seamlessly
+                        </h4>
+                    </div>
+                    <div>
+                        <p>
+                            American Auto Transports offers quick, reliable, and safe shipping for your vehicles. No matter
+                            what your final destination is, we ship your car anywhere across the country. Our quality
+                            service makes sure that your car arrives at your destination in a timely manner. After
+                            hiring American Auto Transports, you just have to sit and watch us transport your vehicle
+                            efficiently.
+                        </p>
+                        <ul>
+                            Are you looking for:
+                            <li>Shipping your vehicle to the northwest</li>
+                            <li>Shipping your vehicle to the Midwest</li>
+                            <li>Shipping your vehicle to the south and southeast </li>
+                            <li>Shipping your vehicle to California</li>
+                            <li>Shipping your vehicle to the northern Rockies</li>
+                        </ul>
+                        <!-- <p>
+                            No matter to which location you intend to ship, American Auto Transports is there to provide easy
+                            and efficient shipping.
+                            American Auto Transports is available to provide simple and effective shipment of your vehicle any
+                            location.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0">
+                <img class="img5" src="../../assets/images/banners/banner3.jpg" width="100%" height="100%" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wthree-slie-btm py-lg-5" id="more">
+    <div class="container how-main11 text-center">
+        <h5>American Auto Transports aims to provide effortless and worry-free shipping of your vehicles</h5>
+        <p>Car shipping by American Auto Transports offers comparative shipping quotes that won’t break your budget. Unlike any
+            other car transport service, our transport makes it easy for you to transport your vehicle. We feel the
+            pride to provide cheap car shipping across the country. Our professional and trained staff helps you get a
+            quotes and work with you getting your vehicle shipping anywhere in the country. That’s why we are considered
+            to be the best autotransporter in the market. </p>
+    </div>
+</section>
+<div class="cpy-right text-center bg-theme">
+    <p class="text-white">Copyright © 2023, American Auto Transports. All rights reserved.</p>
+</div>

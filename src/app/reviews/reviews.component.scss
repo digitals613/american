@@ -1,0 +1,51 @@
+.position-relative{
+    position: relative;
+}
+.card
+{
+    border: none;
+    background: #8080800a;
+    p {
+        letter-spacing: 0px;
+        word-spacing: 0px;
+        color: #464646 !important;
+        line-height: 22px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+} 
+.card-title {
+    color: #000;
+}
+.slick-slide{
+    margin-left: 10px;
+}
+::ng-deep .leftRsBanner{
+    left: -45px;
+}
+::ng-deep.slick-prev:before, 
+::ng-deep .slick-next:before {
+    color: #000;
+}
+::ng-deep .rightRsBanner {
+    right: -50px;
+}
+.Ratingg .fa-star{
+    color: #FDCC0D;
+}
+@media screen and(max-width:1100px)  {
+    ::ng-deep .leftRsBanner{
+        left: -31px;
+    }
+    ::ng-deep .rightRsBanner {
+        right: -34px;
+    }
+}
+@media screen and(max-width:576px)  {
+    ::ng-deep .leftRsBanner{
+        left: 0;
+    }
+    ::ng-deep .rightRsBanner {
+        right: 0px;
+    }
+}

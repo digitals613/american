@@ -1,0 +1,291 @@
+<div class="container-fluid slider position-relative">
+
+	<div>
+		<div class="row form w-100" id="form">
+			<div class="col-lg-6 col-md-6 slide_text">
+				<div class="svg_map">
+					<us-map fillStateColor="#fff" (onMapClick)="getStates($event)" fillColor="black"></us-map>
+				</div>
+				<div *ngIf="currentpage=='/'" class="slide_text11">
+					<h3 class="text-white">Top-Rated</h3>
+					<h6 class="text-white f-40">Car Shippers</h6>
+					<p>So save yourself a headache! With American Auto Transports. 
+						No deposit is charged until your car is loaded on our truck, 
+						and no final balance is due until we deliver your vehicle. 
+					</p>
+					
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/open-vehicle-transport'">
+					<h3 class="text-white f-40 fw-600">Open Vehicle Transport</h3>
+					<p>
+						A cost-effective, efficient, and easy way of transporting your vehicle
+						Request a quote and place an order!
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/enclosed-autotransport'">
+					<h3 class="text-white f-40 fw-600">Enclosed Car Transport</h3>
+					<p>
+						American Auto Transports provides extra protection and safety for your car while it is being
+						transported.
+						Request a quote and place an order!
+	
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/Door-to-door-auto-transport'">
+					<h3 class="text-white f-40 fw-600">Door To Door Auto Transport</h3>
+					<p>
+						The most comfortable, convenient, and trouble-free way to transport your vehicle anywhere, at any time.
+						Request a quote and place an order!
+	
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/car-shipping-service'">
+					<h3 class="text-white f-40 fw-600">Car Shipping Service</h3>
+					<p>
+						American Auto Transports is well-known for providing dependable, reputable, and efficient Car Shipping services.
+						Request a quote and place an order!
+	
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/Snowbird-auto-transport'">
+					<h3 class="text-white f-40 fw-600">Snowbird Auto Transport</h3>
+					<p>
+						American Auto Transports offers safer, less expensive, and faster transport for your vehicle when escaping cold and harsh winter.
+						Request a quote and place an order!
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/multiple-vehicle-quote'">
+					<h3 class="text-white f-40 fw-600">Multiple Vehicles Transport</h3>
+					<p>
+						Looking for a reliable, less expensive, and cost-effective alternative to move several vehicles? American Auto Transports is at your service.
+						Request a quote and place an order!
+	
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/vintage-and-classical-car-shipping'">
+					<h3 class="text-white f-40 fw-600">Vintage & Classic Vehicle Transport</h3>
+					<p>
+						Efficient and secure transport of vintage, antique, and classic automobiles is what separates us from our competitors.
+						Request a quote and place an order!
+	
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/boat-transportation'">
+					<h3 class="text-white f-40 fw-600">Boat Transportation Services</h3>
+					<p>
+						Safe transport of your yacht, a vessel, or a boat at the cost effective rate, consult with American Auto Transports.
+						Request a quote and place an order!
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/car-shipping-cost'">
+					<h3 class="text-white f-40 fw-600">Cost to Ship a Car</h3>
+					<p>
+						Looking for a cost-friendly, efficient, and effective transport service? Let American Auto Transports help you.
+						Request a quote and place an order!
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/vehicle-shipping'">
+					<h3 class="text-white f-40 fw-600">Ship a Car Across Country</h3>
+					<p>
+						American Auto Transports can transport your vehicle from one city to another, from one state to another, from coast to coast, or anywhere in between. 
+						Request a quote and place an order!
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/Motorcycle-Shipping'">
+					<h3 class="text-white f-40 fw-600">Motorcycle Transportation Services</h3>
+					<p>
+						Easy, affordable, and convenient motorcycle shipping, anywhere at anytime. Contact American Auto Transports.
+						Request a quote and place an order!
+
+					</p>
+				</div>
+				<div class="slide_text11" *ngIf="currentpage=='/inoperable-car-transport'">
+					<h3 class="text-white f-40 fw-600">In-Operable Auto Transport</h3>
+					<p>
+						American Auto Transports is cost effective and can assist you get your non-running vehicle to its destination, regardless of its condition.
+						Request a quote and place an order!
+	
+					</p>
+				</div>
+			</div>	
+			<div class="col-lg-6 col-md-6 booking-form" id="booking-form">
+				<h5>Get an Instant Quote <br>
+					or Call Now at <a href="tel:+1 (818) 760-5145"><b>(818) 760-5145</b></a></h5>
+				<form [formGroup]="requestBookingForm1" *ngIf='booking1 == true && !verifyToKen'>
+					<div class="form-row">
+						<div class="displays">
+							<div class="form-group">
+								<mat-form-field class="w-100">
+									<input matInput  [(ngModel)]="pick_up" formControlName="pick_up" id="textsearch"
+										placeholder="Pickup Zip Code" matGoogleMapsAutocomplete
+										(onAutocompleteSelected)="onAutocompleteSelected($event)"
+										(onLocationSelected)="onLocationSelected($event)" required>
+								</mat-form-field>
+							</div>
+						</div>
+
+
+						<div class="displays">
+							<div class="form-group">
+								<mat-form-field class="w-100">
+									<input matInput [(ngModel)]="drop_off"
+										formControlName="drop_off" placeholder="DropOff Zip Code"
+										matGoogleMapsAutocomplete
+										(onAutocompleteSelected)="onAutocompleteSelected($event)"
+										(onLocationSelected)="onLocationSelected($event)" required>
+								</mat-form-field>
+
+							</div>
+						</div>
+
+						<div class="displays">
+							<div class="form-group">
+								<label id="label" class="lable">Type of service</label>
+
+							<mat-radio-group aria-label="Select an option" class="w-100">
+								<mat-radio-button value="Open" class="mr-3" formControlName="service" [(ngModel)]="service"
+								(change)="typeService($event)" name="service" ngDefaultControl>Open</mat-radio-button>
+								<mat-radio-button value="Enclosed" formControlName="service" [(ngModel)]="service"
+								(change)="typeService($event)" name="service" ngDefaultControl>Enclosed</mat-radio-button>
+							  </mat-radio-group>
+							</div>
+						</div>
+
+
+						<div class="formBtn">
+							<button class="btn w3ls-btn formbutton" (click)="book1()"
+								[disabled]="!requestBookingForm1.valid">Vehicle details &nbsp; <i
+									class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+						</div>
+					</div>
+				</form>
+
+				<form [formGroup]="requestBookingForm2" *ngIf='booking2 == true && !verifyToKen'>
+					<div class="form-row">
+						<div class="displays">
+							<div class="form-group">
+								<mat-form-field class="w-100">
+									<input matInput type="number"  placeholder="Vehicle Year" [(ngModel)]="year"
+									formControlName="year" required>
+								</mat-form-field>
+								
+
+							</div>
+						</div>
+						<div class="displays">
+							<div class="form-group">
+								<mat-form-field class="w-100">
+									<input matInput type="text" placeholder="Vehicle Make" [(ngModel)]="make"
+									formControlName="make" required>
+								</mat-form-field>
+								
+
+							</div>
+						</div>
+
+						<div class="displays">
+							<div class="form-group">
+								<mat-form-field class="w-100">
+									<input matInput type="text" placeholder="Vehicle Model" [(ngModel)]="moodel"
+									formControlName="model" required>
+								</mat-form-field>
+
+
+							</div>
+						</div>
+
+						<div class="displays">
+							<div class="form-group">
+								<label id="label" class="lable">Does your vehicle run?</label>
+								<mat-radio-group aria-label="Select an option" class="w-100">
+									<mat-radio-button id="yes" value="Yes" class="mr-3" formControlName="run"
+									(change)="vehicleRun($event)" name="run" ngDefaultControl>Yes</mat-radio-button>
+									<mat-radio-button id="no" (change)="vehicleRun($event)" formControlName="run"
+									name="run" value="No" ngDefaultControl>No</mat-radio-button>
+								  </mat-radio-group>
+							</div>
+						</div>
+
+						<div class="formBtn">
+							<button class="btn w3ls-btn formbutton" (click)="book2()"
+								[disabled]="!requestBookingForm2.valid">Confirmation details &nbsp; <i
+									class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+						</div>
+					</div>
+				</form>
+
+				<form [formGroup]="requestBookingForm3" *ngIf='booking3 == true && !verifyToKen'>
+					<div class="form-row">
+						<div class="displays">
+							<div class="form-group">
+
+								<mat-form-field appearance="fill" class="w-100">
+									<mat-label>Pickup Date</mat-label>
+									<input matInput [matDatepicker]="picker" formControlName="pick_up_date" [(ngModel)]="pick_up_date">
+									<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+									<mat-datepicker #picker></mat-datepicker>
+								  </mat-form-field>
+							</div>
+						</div>
+
+
+						<div class="displays">
+							<div class="form-group">
+								<mat-form-field class="w-100">
+									<input matInput type="text" placeholder="Customer Name" [(ngModel)]="name"
+									formControlName="name" minlength="4" required>
+								</mat-form-field>
+								
+
+							</div>
+						</div>
+
+						<div class="displays">
+							<div class="form-group">
+								<mat-form-field class="w-100">
+									<input matInput type="text" placeholder="Customer Phone No"
+									[(ngModel)]="phone" formControlName="number" [textMask]="{mask: phoneMask}" required>
+								</mat-form-field>
+								
+							</div>
+						</div>
+
+						<div class="displays">
+							<div class="form-group">
+								<mat-form-field class="w-100">
+									<input matInput type="email"  placeholder="Customer Email" [(ngModel)]="email"
+									formControlName="email" required>
+								</mat-form-field>
+								
+							</div>
+						</div>
+
+
+						<div class="formBtn">
+							<button class="btn w3ls-btn formbutton" (click)="sendCode()"
+								[disabled]="!requestBookingForm3.valid">SEND </button>
+						</div>
+					</div>
+				</form>
+				<form [formGroup]="verifyForm"  *ngIf="verifyToKen">
+					<div class="displays">
+						<div class="form-group">
+							<mat-form-field class="w-100">
+								<input matInput type="text" placeholder="Enter verification code" formControlName="verifying" [(ngModel)]="verifyNumber" required>
+							</mat-form-field>
+							<div class="formBtn">
+								<button class="btn w3ls-btn formbutton" (click)="back()">Back </button>
+								<button class="btn w3ls-btn formbutton" (click)="verifyCode()"
+									[disabled]="!verifyForm.valid">Verify </button>
+									
+							</div>
+
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+	</div>
+</div>

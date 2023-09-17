@@ -1,0 +1,87 @@
+.quote, .pick, .recive{
+    margin-bottom: 50px;
+    .display{
+        display: flex;
+    }
+    .content{
+        align-self: center;
+    }
+    img{
+        width: 600px;
+    }
+} 
+.how-does{
+    padding: 75px 0;
+    img{
+        width: 600px;
+    }
+    p{
+        margin-top: 40px;
+    }
+} 
+h4{
+    color: #e20074;
+}
+@media screen and (max-width: 1024px) {
+    .quote, .pick, .recive{
+        margin-bottom: 50px;
+        .content{
+            align-self: center;
+        }
+        img{
+            width: 500px;
+        }
+    } 
+}
+@media screen and (max-width: 768px) {
+    .quote, .pick, .recive{
+        margin-bottom: 50px;
+        padding: 0 25px;
+        .display{
+            display: block;
+        }
+    } 
+    .how-does{
+        padding: 75px 25px;
+        img{
+            width: 500px;
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .quote, .pick, .recive{
+        margin-bottom: 50px;
+        padding: 0 35px;
+        .display{
+            display: block;
+        }
+        img{
+            width: 350px;
+        }
+    } 
+    .how-does{
+        padding:25px;
+        img{
+            width: 300px;
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .quote, .pick, .recive{
+        img{
+            width: 300px;
+        }
+    } 
+    .how-does{
+        img{
+            width: 250px;
+        }
+    }
+}
+@media screen and (max-width: 325px) {
+    .quote, .pick, .recive{
+        img{
+            width: 250px;
+        }
+    } 
+}

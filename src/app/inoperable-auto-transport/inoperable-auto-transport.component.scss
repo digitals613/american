@@ -1,0 +1,50 @@
+
+// .main{
+//     padding: 50px;
+// }
+p, ul li{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    // letter-spacing: 1px;
+    line-height: 1.9;
+    color: #999;
+}
+
+.inoperable{
+    h3{
+        color: #e20074;
+    }
+    h4{
+        padding-top: 20px;
+    }
+}
+.reliable ,.how, .transporting, .assitance{
+    padding-top: 20px;
+    p{
+        padding-top: 10px;
+    }
+}
+
+.inner-banner-w3ls {
+    min-height: 500px;
+    position: relative;
+    z-index: 0;
+}
+.inner-banner-12 {
+    background:linear-gradient(#ffffff59, rgba(255, 255, 255, 0)), url('../../assets/images/banners/banner12.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 250px 250px 250px 250px #0000009e inset;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    height: 600px;
+    z-index: 1;
+}
+@media screen and  (max-width : 568px) {
+    .inner-banner-w3ls {
+        min-height: 250px;
+    }
+}

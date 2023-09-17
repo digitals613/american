@@ -1,0 +1,126 @@
+<div class="container mt-90">
+    <div class="main">
+        <h2 class="text-center">Refund settlement agreement and Release of All claims</h2>
+        <p>This refund settlement agreement and release of all claims (Agreement) is made and entered into by and
+            between “Shipper” American Auto Transports and “Customer”
+            <input type="text" class="input11" placeholder="Customer" [(ngModel)]="name" disabled>
+            (hereinafter collectively referred to as
+            “the Parties”) entered on
+            <input type="date" class="input11" placeholder="Date" [(ngModel)]="date">
+            as stated
+            <a
+                href="https://americanautotransports.com/agreement">https://americanautotransports.com/agreement</a>.
+            Release and discharge for inconsideration of refund amount
+            of
+            <input type="text" class="input11" [(ngModel)]="amount" placeholder="Amount" disabled>,
+            the “Shipper” American Auto Transportss solutions
+            release the “Customer” from the shipper’s contract (<a
+                href="https://americanautotransports.com/agreement">https://americanautotransports.com/agreement</a>).
+        </p>
+        <p>
+            Additionally By signing this subsequent settlement agreement the client or “customer” agrees, and shall not
+            disparage, criticize, defame or slander against American Auto Transports or its employees, contractors,
+            supplier’s, carriers, drivers, production or services in any manner. “I”, “we” or “customer” further agrees
+            not to initiate or participate in any Negative Communications, written, oral, Google reviews, Facebook or
+            any other social media which impacts American Auto Transports solution or damaging the reputation of American Auto Transports
+            Transport solutions, this including any defamatory remarks in regards to the operation of American Auto Transportss
+            solutions. Failure to adhere to this agreement, the “shipper” or American Auto Transports Solution may claim for
+            damages from “Customer” including cost, expenses and compensation, including out of pocket expenses, loss of
+            use, lost income, lost profits, attorney’s fees, punitive damages, or any other damages or expenses of any
+            kind or character whatsoever, whether based on tort, contract, or other theory of recovery, whether known or
+            unknown, which have arisen in the past or which may arise in the future, whether directly or indirectly,
+            caused by, connected with, resulting from, or arising in any way out of any and all claims embodied in the
+            Lawsuit. This release and discharge shall be a fully binding and complete settlement among all Parties to
+            this Agreement and their heirs, assigns, and successors.
+        </p>
+        <p class="text-center">
+            The <b>Consumer Review Fairness Act</b> does not include any non-disparagement agreements that are included
+            in a
+            settlement agreement after a dispute arises. It also doesn't apply to negotiated, non-form contracts. It
+            also won't protect you if your review includes false information or knowing exaggerations of what actually
+            occurred.
+        </p>
+
+
+        <!-- <div class="end">
+            <p>THIS CONTRACT MUST BE COMPLETED BY A CORPORATE OFFICER OR BY THE LEGAL OWNER. <br> OR EMAIL
+                carrier.agreements@americanautotransports.com</p>
+            <p>PLEASE SEND ORIGINAL, COMPLETED IN FULL AND SIGNED IN BLUE INK TO:</p>
+            <p>American Auto Transports <br>
+                <span  (click)="OpenMap()" style="cursor: pointer; font-weight: 600;">1033 Turnpike St, Canton, MA 02021, United States</span>  <br>
+                <a href="tel:+1 (818) 760-5145">(818) 760-5145</a>
+                
+            </p>
+        </div> -->
+    </div>
+    <div class="signatures">
+        <div class="singnature">
+            <form [formGroup]="AgreementForm">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                        formControlName="check" (click)="Check()" [(ngModel)]="check">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        I agree on terms and conditions
+                    </label>
+                    <mat-error *ngIf="AgreementForm.controls.check?.invalid && AgreementForm.controls.check?.touched">
+                        <mat-error *ngIf="AgreementForm.get('check')?.hasError('required')">
+                            This field is required
+                        </mat-error>
+                    </mat-error>
+                </div>
+                <div class="row refund_form">
+                    <div class="col-sm-5">
+                        <input class="input" type="text" name="name" id="name" placeholder="Enter your name"
+                            formControlName="name" required [(ngModel)]="name">
+                        <mat-error *ngIf="AgreementForm.controls.name?.invalid && AgreementForm.controls.name?.touched">
+                            <mat-error *ngIf="AgreementForm.get('name')?.hasError('required')">
+                                This field is required
+                            </mat-error>
+                        </mat-error>
+                    </div>
+                    <div class="col-sm-3 ml-1">
+                        <input class="input" type="date" name="date" id="date" placeholder="Enter Date"
+                            formControlName="date" required [(ngModel)]="date">
+                        <mat-error
+                            *ngIf="AgreementForm.controls.dates?.invalid && AgreementForm.controls.dates?.touched">
+                            <mat-error *ngIf="AgreementForm.get('dates')?.hasError('required')">
+                                This field is required
+                            </mat-error>
+                        </mat-error>
+                    </div>
+                    <div class="col-sm-2 ml-1">
+                        <input class="input" type="text" name="order" id="order" placeholder="Order Id"
+                            formControlName="order_id" required [(ngModel)]="order_id">
+                        <mat-error
+                            *ngIf="AgreementForm.controls.order_id?.invalid && AgreementForm.controls.order_id?.touched">
+                            <mat-error *ngIf="AgreementForm.get('order_id')?.hasError('required')">
+                                This field is required
+                            </mat-error>
+                        </mat-error>
+                    </div>
+                    <div class="col-sm-2 ml-1">
+                        <input class="input" type="number" name="amount" id="amount" placeholder="Amount"
+                            formControlName="amount" required [(ngModel)]="amount">
+                        <mat-error
+                            *ngIf="AgreementForm.controls.amount?.invalid && AgreementForm.controls.amount?.touched">
+                            <mat-error *ngIf="AgreementForm.get('amount')?.hasError('required')">
+                                This field is required
+                            </mat-error>
+                        </mat-error>
+                    </div>
+                </div>
+            </form>
+
+            <div class="signature-container">
+                <signature-pad (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+            </div>
+            <p>Signature here...</p>
+
+            <div class="buttons">
+                <button (click)="clearSignature()">Clear signature pad</button>
+                <button (click)="savePad()" [disabled]="!AgreementForm.valid || check == false"> Submit</button>
+            </div>
+
+        </div>
+    </div>
+</div>

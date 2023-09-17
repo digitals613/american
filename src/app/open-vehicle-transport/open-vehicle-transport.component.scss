@@ -1,0 +1,399 @@
+
+.heading{
+    font-size: 34px;
+    font-weight: 600;
+}
+.new-head {
+    font-size: 28px!important;
+    font-weight: 600!important;
+}
+h1{
+    font-weight: 600;
+    font-size: 34px !important;
+}
+.f-40 {
+    font-size: 40px !important;
+}
+.slide_text p {
+    font-size: 18px !important;
+    font-weight: 500;
+    color: white !important;
+    text-transform: capitalize;
+}
+
+.form {
+    position: absolute;
+    z-index: 1234;
+    padding: 0 150px;
+    border-radius: 5px;
+}
+.content-one{
+    text-align: center;
+    padding: 50px 0;
+    img{
+        width: 150px;
+    }
+    .each{
+        padding: 50px;
+    }
+    h5{
+        margin-top: 40px;
+    }
+}
+ul li{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #464646;
+}
+p{
+    padding: 0;
+    font-size: 16px;
+    // letter-spacing: 1px;
+    line-height: 1.9;
+    color: #000;
+}
+.bg-services {
+    background: linear-gradient(#ffffff59, rgb(255 255 255 / 0%)), url('../../assets/images/truks-image.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 10px 10px 145px 220px rgb(0 0 0 / 78%) inset
+}
+.title h3 {
+    color: #fff !important;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0 70px;
+}
+.Call{
+    border: 2px solid #00a431;
+    background: #00a431;
+    color: #fff !important;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+
+}
+.looking-btn {
+    align-self: center;
+    text-align: center;
+}
+.mr-3 {
+    margin-right: 10px;
+}
+
+.quote {
+    border: none;
+    background: #e20074;
+    color: #fff;
+    padding: 9px 35px;
+    font-size: 20px;
+    border-radius: 30px !important;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.services-bg-color {
+    display: flex;
+}
+.align-w3 {
+    padding: 2em 0;
+}
+a{
+    text-decoration: none;
+    font-weight: 600;
+}
+.cardss{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    img{
+        height: 185px;
+    }
+}
+.text-justify{
+    text-align: justify;
+}
+.main_row{
+    text-align: center;
+    padding: 50px 0;
+}
+.setpara{
+    width: 80%;
+    font-size: 18px;
+    text-align: left;
+}
+.each-one{
+    margin: 5px;
+    padding: 16px;
+    height: 400px;
+    cursor: pointer;
+    border-radius: 5px;
+    h5{
+        font-size: 24px;
+    }
+}
+.card {
+    border: solid 1px #e2e6ec;
+    cursor: pointer;
+    margin-top: 10px;
+    overflow: hidden;
+    height: 170px;
+}
+.card:hover {
+    box-shadow: 0 5px 30px 0 rgb(35 43 54 / 15%);
+}
+.card-title {
+    color: #000;
+}
+.Ratingg .fa-star {
+    color: #FDCC0D;
+}
+.single-review p {
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #464646 !important;
+    line-height: 22px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.pros-and-cons{
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    .content{
+        align-self: center;
+    }
+    
+    h3{
+        color: #e20074;
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 400px;
+            object-fit: contain;
+        }
+    }
+    .imagee{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 400px;
+            object-fit: fill;
+        }
+      
+    }
+}
+.vehicle-row{
+    padding-top: 50px;
+}
+.each-vehicle{
+    border-radius: 5px;
+    margin: 20px 5px;
+}
+.differences{
+    padding: 50px 0 0 0;
+}
+.second-row{
+    padding: 50px 0;
+}
+.types{
+    padding: 50px 0;
+    ul li{
+        padding: 20px;
+    }
+}
+.carrier{
+    padding-bottom: 50px ;
+    h2{
+        color: #e20074;
+    }
+    .each{
+        padding: 15px 0;
+    }
+}
+.each-img{
+    img{
+        width: 65px;
+        margin-bottom: 30px;
+    }
+}
+.pro-cons-open{
+    padding: 50px 0;
+}
+.opens, .door-cost{
+    padding-top: 50px;
+}
+.what-is-door{
+        background: linear-gradient(#ffffff59, rgb(255 255 255 / 0%)), url('../../assets/images/truks-image.jpg') no-repeat center;
+        background-size: cover;
+        box-shadow: 250px 250px 250px 250px #0000009e inset
+}
+.door-content {
+    padding: 100px 20px;
+     h1{
+        color: #fff !important;
+    }
+    p{
+        color: #fff !important;
+        font-size: 16px;
+    }
+    
+}
+.what-is-car{
+    // background: url('../../assets/images/hero_home_01.jpg') no-repeat center;
+    // background-size: cover;
+    background-color: #99999954;
+    min-height: 350px;
+    // box-shadow: 10px 10px 145px 220px rgb(0 0 0 / 78%) inset;
+}
+.car-content {
+    padding: 70px 20px;
+    p{
+        color: #000 !important;
+        font-size: 16px;
+    }
+}
+.row{
+    margin: 0 !important;
+}
+h5{
+    font-size: 24px;
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color:  #000 !important;
+}
+.door-banner{
+    background: url('../../assets/images/banners/banner8.jpg') no-repeat center;
+    background-size: cover;
+    height: 600px;
+    box-shadow: 250px 250px 250px 250px #0000009e inset;
+    position: relative;
+    z-index: 0;
+}
+.inner-banner-1 {
+    background:linear-gradient(#ffffff59, rgba(255, 255, 255, 0)), url('../../assets/images/banners/banner2.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 250px 250px 250px 250px #0000009e inset;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    height: 550px;
+    z-index: 1;
+
+}
+.inner-banner-4{
+    background:linear-gradient(#ffffff59, rgba(255, 255, 255, 0)), url('../../assets/images/banners/banner4.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 250px 250px 250px 250px #0000009e inset;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    height: 550px;
+    z-index: 1;
+
+}
+.bg-theme11 {
+    display: none;
+}
+@media screen and  (max-width : 576px) {
+    .inner-banner-w3ls {
+        min-height: 250px;
+    }
+    .door-banner{
+        height: 400px;
+    }
+}
+@media(max-width: 991px) {
+    .each-vehicle{
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .each-vehicle2{
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .slide_text{
+        display: none;
+        
+    }
+    .bg-theme11 {
+        background: #e20074;
+        color: #fff;
+        display: block !important;
+        .slide_text1{
+            h3{
+                font-size: 24px;
+            }
+            h6{
+                font-size: 26px;
+            }
+            p{
+                color: #fff !important;
+            }
+        }
+    }
+    .title h3{
+        padding: 0;
+    }
+    .services-bg-color {
+        display: block;
+    }
+    .vehicle-row{
+        padding-top: 0px;
+    }
+    #vehicle-row{
+        padding-top: 50px;
+    }
+    .main_row {
+        padding: 50px 0;
+    }
+} 
+@media screen and (max-width: 768px) {
+    .pros-and-cons{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pros-and-cons{
+        padding: 0 20px;
+        img{
+            width: 250px;
+        }
+    }
+    .carrier{
+        .each{
+            padding: 15px 20px;
+        }
+    }
+    .open,.pro-cons,.types{
+        padding: 0 30px;
+    }
+
+}
+@media screen and (max-width:400px) {
+    .pros-and-cons .imagee img{
+        width: 290px;
+    }
+}

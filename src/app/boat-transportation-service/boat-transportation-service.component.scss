@@ -1,0 +1,85 @@
+
+p, ul li{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    // letter-spacing: 1px;
+    line-height: 1.9;
+    color: #000;
+}
+.boat-trasport{
+    h4{
+        padding-top: 20px;
+    }
+    p{
+        padding-bottom: 20px;
+    }
+} 
+.vehicle-shipping{
+    p{
+        padding-bottom: 10px;
+    }
+}
+.service{
+    span{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    ul li{
+        margin-top: 10px;
+    }
+}
+.before-transporting{
+    display: flex;
+    flex-direction: row;
+    img{
+        width: 550px;
+        padding:20px
+    }
+}
+.inner-banner-10 {
+    background:linear-gradient(#ffffff59, rgba(255, 255, 255, 0)), url('../../assets/images/slide.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 250px 250px 250px 250px #0000009e inset;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    height: 600px;
+    z-index: 1;
+}
+@media screen and  (max-width : 568px) {
+    .inner-banner-w3ls {
+        min-height: 250px;
+    }
+}
+@media screen and  (max-width : 1024px) {
+    .before-transporting{
+        img{
+            width: 400px;
+        }
+    }
+}
+@media screen and  (max-width : 768px) {
+    .before-transporting{
+        flex-direction: column;
+        img{
+            width: 500px;
+        }
+    }
+}
+@media screen and  (max-width : 568px) {
+    .before-transporting{
+        img{
+            width: 300px;
+        }
+    }
+}
+@media screen and  (max-width : 320px) {
+    .before-transporting{
+        img{
+            width: 200px;
+        }
+    }
+}

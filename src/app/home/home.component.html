@@ -1,0 +1,1446 @@
+<!-- banner -->
+<section class="banner mt-70">
+	<app-booking-request></app-booking-request>
+	<!-- <div class="container-fluid slider position-relative">
+		<div>
+			<div class="row form w-100" id="form">
+				<div class="col-lg-6 col-md-6 slide_text">
+					<h3 class="text-white">Top-Rated</h3>
+					<h6 class="text-white f-40">Car Shippers</h6>
+					<p>American Auto Transports make it easy to have your vehicle transported
+						American Auto Transports pride in leading the auto transport industry in customer
+						satisfaction.
+					</p>
+				</div>
+
+				<div class="col-lg-6 col-md-6 booking-form" id="booking-form">
+					<h5>get an instant quote</h5>
+					<form [formGroup]="requestBookingForm1" *ngIf='booking1 == true'>
+						<div class="form-row">
+							<div class="displays">
+								<div class="form-group">
+									<label>Pickup Address/Zip Code</label>
+									<input matInput class="form-control" [(ngModel)]="pick_up" formControlName="pick_up"
+										placeholder="Enter pickup zip code" matGoogleMapsAutocomplete
+										(onAutocompleteSelected)="onAutocompleteSelected($event)"
+										(onLocationSelected)="onLocationSelected($event)">
+								</div>
+							</div>
+							<div class="displays">
+								<div class="form-group">
+									<label>Drop off Address/Zip Code</label>
+
+									<input matInput class="form-control" [(ngModel)]="drop_off"
+										formControlName="drop_off" placeholder="Enter drop off zip code"
+										matGoogleMapsAutocomplete
+										(onAutocompleteSelected)="onAutocompleteSelected($event)"
+										(onLocationSelected)="onLocationSelected($event)">
+								</div>
+							</div>
+							<div class="displays">
+								<div class="form-group">
+									<label id="label">Type of service</label>
+									<span>
+										<input type="radio" id="open" value="Open" formControlName="service"
+											(change)="typeService($event)" name="service"> <label
+											for="open">Open</label>
+									</span>
+									<span>
+										<input type="radio" id="enclosed" (change)="typeService($event)"
+											formControlName="service" name="service" value="Enclosed"><label
+											for="enclosed">Enclosed</label>
+									</span>
+								</div>
+							</div>
+
+
+							<div class="formBtn">
+								<button class="btn w3ls-btn formbutton" (click)="book1()"
+									[disabled]="!requestBookingForm1.valid">Vehicle details &nbsp; <i
+										class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+							</div>
+						</div>
+					</form>
+
+					<form [formGroup]="requestBookingForm2" *ngIf='booking2 == true'>
+						<div class="form-row">
+							<div class="displays">
+								<div class="form-group">
+									<label>VehicleYear</label>
+									<input type="text" class="form-control" placeholder="Vehicle Year"
+										[(ngModel)]="year" formControlName="year">
+
+								</div>
+							</div>
+							<div class="displays">
+								<div class="form-group">
+									<label>Vehicle Make</label>
+									<input type="text" class="form-control" placeholder="Vehicle Make"
+										[(ngModel)]="make" formControlName="make">
+
+								</div>
+							</div>
+
+							<div class="displays">
+								<div class="form-group">
+									<label>Vehicle Model</label>
+									<input type="text" class="form-control" placeholder="Vehicle Model"
+										[(ngModel)]="moodel" formControlName="model">
+
+								</div>
+							</div>
+
+							<div class="displays">
+								<div class="form-group">
+									<label id="label">Does your vehicle run?</label>
+									<span>
+										<input type="radio" id="yes" value="Open" formControlName="run"
+											(change)="vehicleRun($event)" name="run"> <label for="open">Yes</label>
+									</span>
+									<span>
+										<input type="radio" id="no" (change)="vehicleRun($event)" formControlName="run"
+											name="run" value="Enclosed"><label for="enclosed">No</label>
+									</span>
+								</div>
+							</div>
+
+							<div class="formBtn">
+								<button class="btn w3ls-btn formbutton" (click)="book2()"
+									[disabled]="!requestBookingForm2.valid">Confirmation details &nbsp; <i
+										class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+							</div>
+						</div>
+					</form>
+
+					<form [formGroup]="requestBookingForm3" *ngIf='booking3 == true'>
+						<div class="form-row">
+							<div class="displays">
+								<div class="form-group">
+									<label>Pickup Date</label>
+									<input type="date" class="form-control" [(ngModel)]="pick_up_date"
+										formControlName="pick_up_date">
+								</div>
+							</div>
+
+
+							<div class="displays">
+								<div class="form-group">
+									<label>Name</label>
+									<input type="text" class="form-control" placeholder="Enter name" [(ngModel)]="name"
+										formControlName="name" minlength="4">
+
+								</div>
+							</div>
+
+							<div class="displays">
+								<div class="form-group">
+									<label>Phone Number</label>
+									<input type="number" class="form-control" placeholder="Enter Phone no"
+										[(ngModel)]="phone" formControlName="number">
+								</div>
+							</div>
+
+							<div class="displays">
+								<div class="form-group">
+									<label>Email</label>
+									<input type="email" class="form-control" placeholder="Enter email"
+										[(ngModel)]="email" formControlName="email">
+								</div>
+							</div>
+
+
+
+							<div class="formBtn">
+								<button class="btn w3ls-btn formbutton" (click)="requestBooking()"
+									[disabled]="!requestBookingForm3.valid">SEND </button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+		</div>
+	</div> -->
+
+</section>
+<div class="py-3 bg-theme11">
+	<div class="row m-0 slide_text1">
+		<div class="col-sm-5 justify-content-center">
+			<h3 class="text-white">Top-Rated</h3>
+			<h6 class="text-white">Car Shippers</h6>
+		</div>
+		<div class="col-sm-7">
+			<p class="text-white">
+				American Auto Transports make it easy to have your vehicle transported
+				American Auto Transports pride in leading the auto transport industry in customer
+				satisfaction.
+			</p>
+		</div>
+	</div>
+</div>
+<section class="choose-criteria">
+	<div class="container-fluid">
+		<div class="col-lg-5 col-md-7 col-sm-6 pd-0-i col-xs-12">
+			<h4 class="hd1">Flash Sale - 35% Off only for a limited time.</h4>
+			<h4 class="hd1">Take advantage of this incredible offer NOW </h4>
+		</div>
+		<div class="col-lg-4 col-md-5 col-sm-6 pd-0-i col-xs-12 abc">
+			<countdown class="mainpagee1 pop-modal pd-0-i pop-up-timer1" [text]="text"
+				units=" Days | Hours | Minutes | Seconds" [end]="getTime"> </countdown>
+		</div>
+		<div class="looking-btn col-lg-3 col-md-12 col-sm-12 col-xs-12  text-center subsBtn">
+			<button (click)="gerQuote()" class="btn quote mr-3 mb-2" id="btn-quote"> Get A Quote
+			</button>
+			<a class="btn Call" id="btn-quote" href="tel:+1 (818) 760-5145"> <i class="fa fa-phone"></i>(818) 760-5145
+			</a>
+		</div>
+	</div>
+</section>
+<!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<label class="taglines tagline1">American Auto Transports gives you seamless span Door-To-Door Vehicle Transportation
+				experience</label>
+			<img src="../../assets/images/banners/banner1.jpg" class="d-block w-100" alt="banner-1">
+
+		</div>
+		<div class="carousel-item">
+			<label class="taglines tagline2">Ship Your Car Safely with American Auto Transports - The Most Trusted
+				Transportation Shipping Company in USA</label>
+			<img src="../../assets/images/banners/banner2.jpg" class="d-block w-100" alt="banner-2">
+
+		</div>
+		<div class="carousel-item">
+			<label class="taglines tagline1">American Auto Transports: Fast & reliable nationwide auto transport
+				company</label>
+			<img src="../../assets/images/banners/banner3.jpg" class="d-block w-100" alt="banner-3">
+
+		</div>
+		<div class="carousel-item">
+			<label class="taglines tagline2">Trusted vehicle Shipping with Simplicity is American Auto Transports’s
+				standard</label>
+			<img src="../../assets/images/banners/banner4.jpg" class="d-block w-100" alt="banner-4">
+
+		</div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+	<div class=" booking-form" id="booking-form">
+		<h5>get an instant quote</h5>
+		<form [formGroup]="requestBookingForm1" *ngIf='booking1 == true'>
+			<div class="form-row">
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>Pickup Address/Zip Code</label>
+						<input matInput class="form-control" [(ngModel)]="pick_up" formControlName="pick_up"
+							placeholder="Enter pickup zip code" matGoogleMapsAutocomplete
+							(onAutocompleteSelected)="onAutocompleteSelected($event)"
+							(onLocationSelected)="onLocationSelected($event)">
+					</div>
+				</div>
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>Drop off Address/Zip Code</label>
+
+						<input matInput class="form-control" [(ngModel)]="drop_off" formControlName="drop_off"
+							placeholder="Enter drop off zip code" matGoogleMapsAutocomplete
+							(onAutocompleteSelected)="onAutocompleteSelected($event)"
+							(onLocationSelected)="onLocationSelected($event)">
+					</div>
+				</div>
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label id="label">Type of service</label>
+						<span>
+							<input type="radio" id="open" value="Open" formControlName="service"
+								(change)="typeService($event)" name="service"> <label for="open">Open</label>
+						</span>
+						<span>
+							<input type="radio" id="enclosed" (change)="typeService($event)" formControlName="service"
+								name="service" value="Enclosed"><label for="enclosed">Enclosed</label>
+						</span>
+					</div>
+				</div>
+
+
+				<div class="formBtn">
+					<button class="btn w3ls-btn formbutton" (click)="book1()"
+						[disabled]="!requestBookingForm1.valid">Vehicle details &nbsp; <i class="fa fa-arrow-right"
+							aria-hidden="true"></i> </button>
+				</div>
+			</div>
+		</form>
+
+		<form [formGroup]="requestBookingForm2" *ngIf='booking2 == true'>
+			<div class="form-row">
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>VehicleYear</label>
+						<input type="text" class="form-control" placeholder="Vehicle Year" [(ngModel)]="year"
+							formControlName="year">
+
+					</div>
+				</div>
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>Vehicle Make</label>
+						<input type="text" class="form-control" placeholder="Vehicle Make" [(ngModel)]="make"
+							formControlName="make">
+
+					</div>
+				</div>
+
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>Vehicle Model</label>
+						<input type="text" class="form-control" placeholder="Vehicle Model" [(ngModel)]="moodel"
+							formControlName="model">
+
+					</div>
+				</div>
+
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label id="label">Does your vehicle run?</label>
+						<span>
+							<input type="radio" id="yes" value="Open" formControlName="run"
+								(change)="vehicleRun($event)" name="run"> <label for="open">Yes</label>
+						</span>
+						<span>
+							<input type="radio" id="no" (change)="vehicleRun($event)" formControlName="run" name="run"
+								value="Enclosed"><label for="enclosed">No</label>
+						</span>
+					</div>
+				</div>
+
+				<div class="formBtn">
+					<button class="btn w3ls-btn formbutton" (click)="book2()"
+						[disabled]="!requestBookingForm2.valid">Confirmation details &nbsp; <i class="fa fa-arrow-right"
+							aria-hidden="true"></i> </button>
+				</div>
+			</div>
+		</form>
+
+		<form [formGroup]="requestBookingForm3" *ngIf='booking3 == true'>
+			<div class="form-row">
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>Pickup Date</label>
+						<input type="date" class="form-control" [(ngModel)]="pick_up_date"
+							formControlName="pick_up_date">
+					</div>
+				</div>
+
+
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>Name</label>
+						<input type="text" class="form-control" placeholder="Enter name" [(ngModel)]="name"
+							formControlName="name" minlength="4">
+
+					</div>
+				</div>
+
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>Phone Number</label>
+						<input type="number" class="form-control" placeholder="Enter Phone no" [(ngModel)]="phone"
+							formControlName="number">
+					</div>
+				</div>
+
+				<div class="displays">
+					<div class="form-group mb-2">
+						<label>Email</label>
+						<input type="email" class="form-control" placeholder="Enter email" [(ngModel)]="email"
+							formControlName="email">
+					</div>
+				</div>
+				<div class="formBtn">
+					<button class="btn w3ls-btn formbutton" (click)="requestBooking()"
+						[disabled]="!requestBookingForm3.valid">SEND </button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div> -->
+
+<!-- //banner -->
+
+<!--Reviews-->
+<section class="single_grid_w3_main py-4" id="reviews">
+	<app-reviews></app-reviews>
+
+</section>
+
+<!--Reviews-->
+
+
+<!--introduction-->
+<section class="single_grid_w3_main py-4" id="intro">
+	<div class="container">
+		<div>
+			<div class="text-center">
+				<h1 class="heading1">American Auto Transports</h1>
+				<p class="headingline">is the number one rated car transporter company in the U.S.</p>
+			</div>
+			<div class="mt-3 d-flex justify-content-center">
+				<p class="setpara">American Auto Transports specializes in long distance moving and safely transporting
+					cars and other
+					automobile
+					throughout the country, to Hawaii, and even overseas. Our federally licensed, 5-star transport
+					service ships door-to-door for most
+					destinations, and we
+					work
+					with more than 100,000+ reliable auto carriers & trucking companies, so you get to choose how and
+					when
+					your vehicle is picked up, shipped, and delivered safely and in a timely manner. From interstate
+					purchases to island moves, and military transport to luxury and
+					vintage deliveries,
+					American Auto Transports provides trusted vehicle shipping for affordable and fast auto shipping
+					experience.
+				</p>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!--introduction-->
+
+
+<!--Why choose-->
+
+<!-- <section class="single_grid_w3_main align-w3-abt" id="about">
+	<div class="container">
+		<div class="wthree_pvt_title text-center">
+			<h4 class="w3pvt-title">Why choose American Auto Transports for open car shipping?</h4>
+		</div>
+		<div class="row" id="rows">
+			<div class="container-icon-title-text js-container-toggle with-border  is-open col-lg-5 my-lg-0 my-4"
+				id="container-icon-title-text">
+				<div class="part-text-icon">
+					<div class="container-icon-text">
+						<span class="child-icon is-absolute">
+							<div class="abt-icon">
+								<span class="fa fa-shield"></span>
+							</div>
+						</span>
+						<h3 class="text-title is-subheader">Trusted network of carriers</h3>
+					</div> <i class="icon-keyboard_arrow_right with-icon"></i>
+				</div>
+				<p class="part-text text-body">All of our carriers are choosen because of their deidcation to high
+					quality service standards. This allow us to find the best quality carriers to ship a car very
+					quickly.</p>
+			</div>
+			<div class="container-icon-title-text js-container-toggle with-border col-lg-5  my-lg-0 my-4"
+				id="container-icon-title-text">
+				<div class="part-text-icon">
+					<div class="container-icon-text"> <span class="child-icon is-absolute">
+							<div class="abt-icon">
+								<span class="fa fa-dollar"></span>
+							</div>
+						</span>
+						<h3 class="text-title is-subheader">Best prices</h3>
+					</div> <i class="icon-keyboard_arrow_right with-icon"></i>
+				</div>
+				<p class="part-text text-body">We always offer the best car shipping prices possible. Our smart online
+					calculator determines all factors to get you all the fairest and accurate open car transport cost as
+					possible. </p>
+			</div>
+		</div>
+		<div class="row second-row" id="rows">
+			<div class="container-icon-title-text js-container-toggle with-border col-lg-5 my-lg-0 my-4"
+				id="container-icon-title-text">
+				<div class="part-text-icon">
+					<div class="container-icon-text"> <span class="child-icon is-absolute">
+							<div class="abt-icon">
+								<span class="fa fa-ban"></span>
+							</div>
+						</span>
+						<h3 class="text-title is-subheader">No upfront payment</h3>
+					</div> <i class="icon-keyboard_arrow_right with-icon"></i>
+				</div>
+				<p class="part-text text-body">As mentioned above, most auto transport companies (the ones you want to
+					book with, at least) charge you once the carrier has been dispatched for your order. This means
+					you’ll be able to book your open auto transport now and worry about the bill later.</p>
+			</div>
+			<div class="container-icon-title-text js-container-toggle with-border col-lg-5 my-lg-0 my-4"
+				id="container-icon-title-text">
+				<div class="part-text-icon">
+					<div class="container-icon-text"> <span class="child-icon is-absolute">
+							<div class="abt-icon">
+								<span class="fa fa-user-o"></span>
+							</div>
+						</span>
+						<h3 class="text-title is-subheader">Friendly customer service</h3>
+					</div> <i class="icon-keyboard_arrow_right with-icon"></i>
+				</div>
+				<p class="part-text text-body">Our representatives are always friendly and helpful. They will make sure
+					that you have an excellent experience from start to finish.
+				</p>
+			</div>
+		</div>
+	</div>
+
+</section> -->
+
+
+<section class="portfolio-wthree align-w3 pt-0 pb-5" id="portfolio">
+	<div class="container py-xl-5 py-lg-3">
+		<div class="wthree_pvt_title text-center">
+			<h4 class="heading2">Why choose American Auto Transports for open car shipping?</h4>
+		</div>
+		<div>
+			<ul class="demo row">
+				<li class="col-lg-4">
+					<div class="card">
+						<a href="#gal1">
+							<img src="../../assets/images/car-shipping-payment.jpg" alt="image" class="card-img-top" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Car Shipping made easy: Never Pay
+								Anything Upfront
+							</h5>
+							<p class="card-text">When you ship your automobile with American Auto Transports, you pay
+								nothing in advance. You only pay for your shipment once you are comfortable and ready to
+								sign a deal for your vehicle shipping reservation.</p>
+						</div>
+					</div>
+				</li>
+				<li class="col-lg-4">
+					<div class="card">
+						<a href="#gal2">
+							<img src="../../assets/images/fuull-insurance.jpg" alt="image" class="card-img-top" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Full insurance coverage for your auto
+								transport
+							</h5>
+							<p class="card-text">American Auto Transports includes comprehensive insurance coverage
+								in our auto shipping prices. This gives you the peace of mind and you know that your
+								vehicle is fully covered and secure throughout your auto transport service.
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="col-lg-4">
+					<div class="card">
+						<a href="#gal3">
+							<img src="../../assets/images/car-shipping-customer.jpg" alt="image" class="card-img-top" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">24/7 Auto Transport Customer Support
+							</h5>
+							<p class="card-text">Our shipping experts are available 24/7 year around (365 days
+								a year) to always provide you with peace of mind about your auto transport.</p>
+						</div>
+					</div>
+				</li>
+				<li class="col-lg-4">
+					<div class="card">
+						<a href="#gal4">
+							<img src="../../assets/images/professional-customer.jpg" alt="image" class="card-img-top" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">5-star Auto Transport Services &
+								Customer Care</h5>
+							<p class="card-text">Once you start your car shipment process, we will assign you
+								with a dedicated expert team member who will be your point person to support your
+								shipment from start to finish.</p>
+						</div>
+					</div>
+				</li>
+				<li class="col-lg-4">
+					<div class="card">
+						<a href="#gal5">
+							<img src="../../assets/images/car-auto-transport.jpg" alt="image" class="card-img-top" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">Personalized Approach for your Auto
+								Transport</h5>
+							<p class="card-text">At American Auto Transports, we work with you through every step of
+								completing your auto transportation and make it seamless for you.</p>
+						</div>
+					</div>
+				</li>
+				<li class="col-lg-4">
+					<div class="card">
+						<a href="#gal6">
+							<img src="../../assets/images/Semi-Truck.jpg" alt="image" class="card-img-top" />
+						</a>
+						<div class="card-body">
+							<h5 class="card-title">100K+ Car Carriers & Trucking companies
+								in our
+								Network
+							</h5>
+							<p class="card-text">American Auto Transports has a network of 100K+ reliable
+								and trustworthy trucking companies & car shipping carriers.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- popup-->
+		<div id="gal1" class="popup-effect animate">
+			<div class="popup">
+				<img src="../../assets/images/car-shipping-payment.jpg" alt="Popup Image" class="img-fluid" />
+				<h3 class="text-title is-subheader mb-3 mt-3">Car Shipping made easy: Never Pay Anything Upfront
+				</h3>
+				<p class="part-text text-body">When you ship your automobile with American Auto Transports, you pay
+					nothing in advance. You only pay for your shipment once you are comfortable and ready to
+					sign a deal for your vehicle shipping reservation.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup -->
+		<!-- popup-->
+		<div id="gal2" class="popup-effect animate">
+			<div class="popup">
+				<img src="../../assets/images/fuull-insurance.jpg" alt="Popup Image" class="img-fluid" />
+				<h3 class="text-title is-subheader mb-3 mt-3">Full insurance coverage for your auto transport
+				</h3>
+				<p class="part-text text-body">American Auto Transports includes comprehensive insurance coverage
+					in our auto shipping prices. This gives you the peace of mind and you know that your
+					vehicle is fully covered and secure throughout your auto transport service. There are no
+					additional or hidden fees. Our car shipping prices are all-inclusive.
+				</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup -->
+		<!-- popup-->
+		<div id="gal3" class="popup-effect animate">
+			<div class="popup">
+				<img src="../../assets/images/car-shipping-customer.jpg" alt="Popup Image" class="img-fluid" />
+				<h3 class="text-title is-subheader mb-3 mt-3">24/7 Auto Transport Customer Support </h3>
+				<p class="part-text text-body">Our shipping experts are available 24/7 year around (365 days
+					a year) to always provide you with peace of mind about your auto transport. We pride
+					ourselves on being there when you need us, and we take the time to monitor your auto
+					shipment 24/7.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup3 -->
+		<!-- popup-->
+		<div id="gal4" class="popup-effect animate">
+			<div class="popup">
+				<img src="../../assets/images/professional-customer.jpg" alt="Popup Image" class="img-fluid" />
+				<h3 class="text-title is-subheader mb-3 mt-3">5-star Auto Transport Services & Customer Care</h3>
+				<p class="part-text text-body">Once you start your car shipment process, we will assign you
+					with a dedicated expert team member who will be your point person to support your
+					shipment from start to finish. From the moment you request your car shipping quote
+					online, our experienced shipping advisors are there to guide you through the whole
+					process step by step. Our dedicated sales team ensures that you get the service you
+					need. Our dispatch, support, and claims departments ensure your shipment is efficiently
+					handled from start to finish.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup -->
+		<!-- popup-->
+		<div id="gal5" class="popup-effect animate">
+			<div class="popup">
+				<img src="../../assets/images/car-auto-transport.jpg" alt="Popup Image" class="img-fluid" />
+				<h3 class="text-title is-subheader mb-3 mt-3">Personalized Approach for your Auto Transport</h3>
+				<p class="part-text text-body">At American Auto Transports, we work with you through every step of
+					completing your auto transportation and make it seamless for you. We guarantee
+					hassle-free shipping when you choose American Auto Transports along with guaranteeing an easy
+					and painless shipment process.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup -->
+		<!-- popup-->
+		<div id="gal6" class="popup-effect animate">
+			<div class="popup">
+				<img src="../../assets/images/Semi-Truck.jpg" alt="Popup Image" class="img-fluid" />
+				<h3 class="text-title is-subheader mb-3 mt-3">100K+ Car Carriers & Trucking companies in our
+					Network
+				</h3>
+				<p class="part-text text-body">American Auto Transports has a network of 100K+ reliable
+					and trustworthy trucking companies & car shipping carriers. Our expert network of car
+					transportation haulers are personally vetted, ensuring your end-to-end auto vehicle
+					transport experience is seamless and enjoyable.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup -->
+	</div>
+</section>
+<!-- //Why choose -->
+
+
+<!--Carriers-->
+<section class="blog_w3ls align-w3 carriers" id="carriers">
+	<div class="container">
+		<div class="wthree_pvt_title text-center">
+			<h2 class="heading2">We have more than 200k reliable carriers <br> in our arsenal</h2>
+		</div>
+
+		<div class="row single_blog">
+			<div class="col-lg-3 single_blong_in">
+				<div class="abt-icon icons">
+					<span class="fa fa-truck"></span>
+				</div>
+				<h5>15k</h5>
+				<p>Vehicles Delivered</p>
+			</div>
+			<div class="col-lg-3 single_blong_in">
+				<div class="abt-icon icons">
+					<span class="fa fa-star-half-o"></span>
+				</div>
+				<h5>4.9</h5>
+				<p>Overall Customer Rating</p>
+			</div>
+			<div class="col-lg-3 single_blong_in">
+				<div class="abt-icon icons">
+					<span class="fa fa-users"></span>
+				</div>
+				<h5>10k+</h5>
+				<p>Happy Customers</p>
+			</div>
+			<div class="col-lg-3">
+				<div class="abt-icon icons">
+					<span class="fa fa-calendar"></span>
+				</div>
+				<h5>16+</h5>
+				<p>Years Experience</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- <div class="container-fluid">
+		<div class="wthree_pvt_title text-center">
+			<h4 class="w3pvt-title">We have more than 200k reliable carriers in our arsenal
+			</h4>
+			<h6 class="sub-title">American Auto Transports can ship your car promptly, efficiently, and at a fair price.</h6>
+		</div>
+		<div class="back">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center logo-wrap">
+						<img src="../../assets/images/logo.png" class="lazy-img" alt="logo">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-12">
+						<div class="stats-wrap text-center">
+							<span class="value">
+								<span class="data" data-count="15">15</span><span class="sufix">k+</span>
+							</span>
+							<span class="content">Vehicles delivered</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-12">
+						<div class="stats-wrap mid text-center">
+							<span class="value">
+								<span class="data" data-count="4.9">4.9</span><span class="sufix"></span>
+							</span>
+							<span class="content">Overall customer rating</span>
+						</div>
+					</div>
+					<div class="col-lg-4 col-12">
+						<div class="stats-wrap text-center">
+							<span class="value">
+								<span class="data" data-count="10">10</span><span class="sufix">k+</span>
+							</span>
+							<span class="content">Happy customers</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div> -->
+</section>
+<!--Carriers-->
+
+
+<!-- services -->
+<section class="bg-services position-relative align-w3" id="services">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="services-bg-color text-center justify-content-between">
+					<div class="title align-self-center">
+						<h3>American Auto Transports can ship your car promptly, efficiently, and at a fair price.</h3>
+					</div>
+					<div class="looking-btn col-lg-5">
+						<button (click)="gerQuote()" class="btn quote mr-3 mb-2" id="btn-quote"> Get A Quote
+						</button>
+						<a class="btn Call" id="btn-quote" href="tel:+1 (818) 760-5145"> <i
+								class="fa fa-phone"></i>(818) 760-5145
+						</a>
+					</div>
+					<!-- <div class="d-flex">
+							<a href="about.html" class="btn w3ls-btn">Get Quote</a>
+						</div> -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //services -->
+
+<!-- slide -->
+<section class="wthree-slie-btm py-lg-5" id="more">
+	<div class="container-fluid how-main">
+		<!-- <div class="how-much">
+			<h2>How Much Does American Auto Transports Charge For Shipment?</h2>
+		</div> -->
+		<div class="row m-0">
+			<div class="col-lg-7 mt-lg-0 mt-4">
+				<div class="container">
+					<div class="wthree_pvt_title">
+						<span class="sub-title">Why Choose Us</span>
+						<h4 class="heading2">How Much Does American Auto Transports Charge For Shipment?
+						</h4>
+
+					</div>
+					<div class="row flex-column text-why">
+						<div class="abt-grid">
+							<div class="row">
+								<div class="col-lg-1 col-sm-12 single-choose">
+									<div class="abt-icons">
+										<span class="fa fa-check-circle-o"></span>
+									</div>
+								</div>
+								<div class="col-lg-11 col-sm-12">
+									<div class="abt-txt ml-0">
+										<h4>Size and weight of vehicle </h4>
+										<p>Longer, taller, or heavier-than-average vehicles require special
+											accommodations and, as a result, the price may vary. Having said that, we
+											guarantee lowest and most competitive prices in the market.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="abt-grid mt-4 pt-lg-2">
+							<div class="row">
+								<div class="col-lg-1 col-sm-12 single-choose">
+									<div class="abt-icons">
+										<span class="fa fa-check-circle-o"></span>
+									</div>
+								</div>
+								<div class="col-lg-11 col-sm-12 ">
+									<div class="abt-txt ml-0">
+										<h4>The car condition</h4>
+										<p>Shipping inoperable vehicles costs more because it requires extra tools and
+											labor to accommodate the vehicle. Be at ease, we guarantee any kind of
+											shipment: if your car rolls, steers, and brakes, we can ship it.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="abt-grid mt-4 pt-lg-2">
+							<div class="row">
+								<div class="col-lg-1 col-sm-12  single-choose">
+									<div class="abt-icons">
+										<span class="fa fa-check-circle-o"></span>
+									</div>
+								</div>
+								<div class="col-lg-11 col-sm-12 ">
+									<div class="abt-txt ml-0">
+										<h4>The transport type</h4>
+										<p><a href="/open-vehicle-transport">Open transport</a> is standard and the most
+											affordable and viable option.
+											<a href="/enclosed-autotransport">Enclosed transport</a> requires specific
+											handling, so the price might be
+											different and a bit higher.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="abt-grid mt-4 pt-lg-2">
+							<div class="row">
+								<div class="col-lg-1 col-sm-12  single-choose">
+									<div class="abt-icons">
+										<span class="fa fa-check-circle-o"></span>
+									</div>
+								</div>
+								<div class="col-lg-11 col-sm-12 ">
+									<div class="abt-txt ml-0">
+										<h4>The shipping distance</h4>
+										<p>Longer runs have a higher overall price but lower cost per mile. The further
+											your vehicle travels, the more you save on an auto transportation.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 align-self-center p-0">
+				<img class="w-100" src="../../assets/images/car shiping.png" alt="banner">
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="bg-looking position-relative align-w3" id="looking">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="row">
+					<div class="col-lg-7">
+						<h3>Looking for the best transportation services?</h3>
+						<p>Our federally licensed, 5-star transport service ships <a
+								href="/Door-to-door-auto-transport">door-to-door</a> for most destinations,
+							and we work with more than 100,000+ reliable auto carriers & trucking companies.</p>
+					</div>
+					<!-- <div class="col-lg-6"><button class="btn quote">Get Quote</button></div> -->
+					<div class="looking-btn col-lg-5">
+						<button (click)="gerQuote()" class="btn quote mr-3 mb-2" id="btn-quote"> Get A Quote
+						</button>
+						<a class="btn Call" id="btn-quote" href="tel:+1 (818) 760-5145"><i
+								class="fa fa-phone"></i>(818) 760-5145
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //looking -->
+
+
+<section class="bg-trusted position-relative align-w3" id="trusted">
+	<div class="container">
+		<div class="ab">
+
+			<div class="w-100">
+				<div class="wthree_pvt_title">
+					<span class="headingline">Most Trusted</span>
+					<h4 class="heading2">Vehicle Shipping Company
+					</h4>
+
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="abt-grid grids">
+							<div class="abt-icon last_icon">
+								<span class="fa fa-car"></span>
+							</div>
+							<div class="abt-txt">
+								<h4>Fast And Efficient Transport</h4>
+								<p>We offer a ridiculously fast transport service. We know how to create customer
+									satisfaction therefore;
+									we hire and train individuals who are efficient in their work. American Auto Transports
+									solutions ensure to
+									provide quick transport of vehicles to any part of the country. Our staff is highly
+									trained and efficient
+									to ship vehicles quickly and safely. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 my-lg-0 my-4">
+						<div class="abt-grid grids">
+							<div class="abt-icon last_icon">
+								<span class="fa fa-car"></span>
+							</div>
+							<div class="abt-txt">
+								<h4>Reliable And Stress-Free Service</h4>
+								<p>Our service relieves you from the stress and tension of shipping your vehicle.
+									American Auto Transports does not
+									transport vehicles only, it also focuses on providing reliable and stress-free
+									service to its customers.
+									Our customers believe in our reliable transport service and hence, always choose
+									American Auto Transports for
+									shipping their vehicles. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row row-two">
+					<div class="col-lg-6">
+						<div class="abt-grid grids">
+							<div class="abt-icon last_icon">
+								<span class="fa fa-car"></span>
+							</div>
+							<div class="abt-txt">
+								<h4>Trusted Service</h4>
+								<p>American Auto Transports has been offering safe, quick, and efficient transport of vehicles
+									all over the country. This helped us build satisfaction
+									and trust among our customers. We offer 100% safe and secure shipping service for
+									your vehicle. Our trained staff makes sure to provide efficient
+									and trusted service to our customers.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 my-lg-0 my-4">
+						<div class="abt-grid grids">
+							<div class="abt-icon last_icon">
+								<span class="fa fa-car"></span>
+							</div>
+							<div class="abt-txt">
+								<h4>Cheap And Affordable Transport</h4>
+								<p>
+									Unlike other transporters, American Auto Transports provides efficient and secure transport
+									at very cheap and affordable rates. We focus on building a better network of
+									transport
+									which is only possible by shipping your vehicle safely and cheaply. Hurry up and
+									contact
+									us at +1 (818) 760-5145 to get a quote.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="w-100 align-w3">
+				<div>
+					<span class="sub-title">Frequently Asked Question</span>
+					<h4 class="heading2">Have Any Question?
+					</h4>
+
+				</div>
+				<div class="accordion faq" id="accordionExample">
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingOne">
+							<button class="accordion-button acrd-btn" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Why should I choose American Auto Transports?
+							</button>
+						</h4>
+						<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>We have expert team members on staff that will ensure that your shipment arrives
+										on schedule.
+										Furthermore, you may rely on our experienced staff to assist you at any time
+										during the procedure. In
+										the event that an issue arises, we are ready to assist. American Auto Transports
+										Solutions offers a team of
+										seasoned and professional drivers that have shown (throughout the years) to be
+										very dependable and
+										experienced in completing even the most difficult jobs. </p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								What is the cost of shipping a vehicle?
+							</button>
+						</h4>
+						<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>The pricing of vehicles is based on current market patterns for automobile
+										transportation across the
+										United States. Your total cost will be determined by the type of vehicle you
+										want to transport, where it
+										needs to go, its size, vehicle condition (running, non-running, inoperable),
+										total transport distance
+										from origin to destination, transport type (open or enclosed trailer shipment),
+										and, finally, the time
+										of year you book.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								How far in advance should I schedule the transport of my vehicle?
+							</button>
+						</h4>
+						<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>We strongly advise that you arrange your moving as soon as possible to guarantee
+										that your vehicle is
+										transported in the time that best suits your needs. Typically, we can have a
+										truck assigned to your
+										vehicle and on its way to pick it up within 1 to 3 days of the vehicle becoming
+										available for pick-up.
+									</p>
+									<p>If your vehicle is available for immediate pick-up, we will work with you to
+										arrange it as close to
+										your specified pick-up date as feasible. It is advisable to submit
+										transportation requests three to four
+										days ahead of the available date. It is beneficial to plan your vehicle
+										transportation ahead of time,
+										although it is not always essential.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingFour">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								What do I need for reservation? Do I have to pay everything when I make a reservation?
+							</button>
+						</h4>
+						<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>For reservation you would need to share these details:</p>
+									<ul>
+										<li>exact pick-up</li>
+										<li>delivery address</li>
+										<li>names and phone numbers of people who will be picking-up and delivery and
+										</li>
+										<li>first available pick-up date. </li>
+									</ul>
+									<p>We don't charge anything up ahead for making a reservation. You will be required
+										to pay a deposit after
+										we have secured your position on the trailer. The balance is payable at the time
+										of pick-up or delivery,
+										and you may pay the driver directly with cash, cashier's check, or money order.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingFive">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+								Are there any additional costs?
+							</button>
+						</h4>
+						<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>Certainly not. Our quoted price includes everything. It includes <a
+											href="/Door-to-door-auto-transport">door-to-door</a>
+										service, full
+										bumper-to-bumper insurance, all taxes and tolls, and free storage of personal
+										things up to 100 lbs.
+										within the vehicle.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingSix">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+								How does American Auto Transports calculate my shipping cost?
+							</button>
+						</h4>
+						<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>There are a few factors that affect the auto transport cost: </p>
+									<ul>
+										<li>route distance, </li>
+										<li>vehicle size and </li>
+										<li>condition (running or non-operable), </li>
+										<li>the type of trailer that would be used (open or enclosed) and </li>
+										<li>the season. </li>
+									</ul>
+									<p>If you want to move your vehicle down to Florida in the fall, for example, the
+										cost will be greater
+										owing to the massive volume of traffic due to the snowbirds heading south to
+										Florida.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingSeven">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+								What different payment options does American Auto Transports offer?
+							</button>
+						</h4>
+						<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>We accept a variety of payment options. Credit or debit vehicles are the most
+										frequent methods of
+										payment. Clients pay a portion charge that ranges from 10% to 20% of the total
+										amount once we have
+										locked down your vehicle. The remaining payment is paid in full at the time of
+										delivery. Once your
+										vehicle has been picked up, you can pay the outstanding balance. You won't have
+										to worry about paying on
+										delivery this way. Mastercard Visa, American Express, and Discover are all
+										accepted. You may also use
+										PayPal to make a payment.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingEight">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+								What payment methods are available on delivery?
+							</button>
+						</h4>
+						<div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>On delivery, most drivers do not take credit cards or personal cheques. If you
+										have an outstanding
+										amount due on delivery, make sure you have cash, a cashier's check, or a money
+										order to pay the drive
+										immediately.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingNine">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+								How long does it take for my vehicle to be picked up?
+							</button>
+						</h4>
+						<div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>This is dependent on one factor: the time of pick-up. If your vehicle must be
+										picked up from a large
+										metropolitan region, it will almost always be picked up on the precise day you
+										specify. Keep in mind
+										that delays might happen due to weather, traffic, or poor road conditions. It
+										may take 1-3 days for your
+										vehicle to be picked up if it is located in a more remote region.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h4 class="accordion-header" id="headingTen">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+								How long does it take for my vehicle to be delivered?
+							</button>
+						</h4>
+						<div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+							data-bs-parent="#accordionExample">
+							<div class="accordion-body">
+								<div itemprop="text">
+									<p>You can feel assured and have our guarantee that your vehicle will arrive on time
+										once we have verified
+										your dates with your driver. There may be delays due to inclement weather or
+										unforeseen truck breakdowns
+										encountered by the driver end route. The time it takes to ship from coast to
+										coast is generally between
+										6 and 9 days. It takes 4 to 6 days to ship a vehicle from north to south and
+										vice versa. Once the
+										vehicle has been picked up, auto shipment under 500 miles should take 1 to 3
+										days.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</section>
+
+
+<!-- blog -->
+<section class="blog_w3ls" id="blog">
+	<div class="container">
+		<div class="wthree_pvt_title text-center">
+			<h4 class="heading2">Latest posts</h4>
+		</div>
+		<div class="row space-sec">
+			<!-- blog grid -->
+			<div class="col-lg-4 col-md-6 mt-sm-0 mt-4">
+				<div class="card">
+					<div class="card-header p-0 position-relative">
+						<a href="/How-To-Ship-A-Car-Across-the-Country">
+							<img class="card-img-bottom" src="../../assets/images/blog3.jpg" alt="Card image cap">
+							<span class="post-icon">How To Ship A Car Across The Country</span>
+						</a>
+					</div>
+					<div class="card-body">
+						<p>American Auto Transports most reliable, effective, and efficient car shipping service in the market.
+							American Auto Transports offers the best Military Car Shipping services in the industry at
+							affordable pricing.</p>
+						<a href="/How-To-Ship-A-Car-Across-the-Country" class="blog_link">Read more</a>
+					</div>
+				</div>
+			</div>
+			<!-- //blog grid -->
+			<!-- blog grid -->
+			<div class="col-lg-4 col-md-6 mt-md-0  mt-4">
+				<div class="card">
+					<div class="card-header p-0 position-relative">
+						<a href="/cheapest-way-to-ship-a-motorcycle">
+							<img class="card-img-bottom" src="../../assets/images/blog.jpg" alt="Card image cap">
+							<span class="post-icon">Cheapest Way To Ship A Motorcycle</span>
+						</a>
+					</div>
+					<div class="card-body">
+						<p>Easy, Affordable, And Convenient Motorcycle Shipping, Anywhere Anytime American Auto Transports
+							solutions ship all types of motorcycles all around the country with a network of 40
+							terminals and 30 modern carriers.</p>
+						<a href="/cheapest-way-to-ship-a-motorcycle" class="blog_link">Read more</a>
+					</div>
+				</div>
+			</div>
+			<!-- //blog grid -->
+			<!-- blog grid -->
+			<div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mx-auto blog-end">
+				<div class="card">
+					<div class="card-header p-0  position-relative">
+						<a href="/door-to-door-car-shipping">
+							<img class="card-img-bottom" src="../../assets/images/enclose/car-image.jpg"
+								alt="Card image cap">
+							<span class="post-icon">Best Door to Door Car Shipping Company</span>
+						</a>
+					</div>
+					<div class="card-body">
+						<p>Are you looking for the best door-to-door Car Shipping Company? You don’t need to look so far
+							as American Auto Transports Solution is here to serve you. .</p>
+						<a href="/door-to-door-car-shipping" class="blog_link">Read more</a>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<!-- <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mx-auto blog-end">
+				<div class="card">
+					<div class="card-header p-0  position-relative">
+						<a href="/door-to-door-transport-services">
+							<img class="card-img-bottom" src="../../assets/images/door-to-door-blog.jpg"
+								alt="Card image cap">
+							<span class="post-icon">Door To Door Transport Service</span>
+						</a>
+					</div>
+					<div class="card-body">
+						<p>Door-to-door auto transport is the most convenient form of Car Shipping. It is a type of
+							transport in which a transport company picks up and drops your vehicle at your desired
+							location within no time.</p>
+						<a href="/door-to-door-transport-services" class="blog_link">Read more</a>
+					</div>
+				</div>
+			</div> -->
+			<!-- //blog grid -->
+		</div>
+	</div>
+</section>
+<!-- //blog -->
+
+
+
+
+
+
+<!-- <section class="portfolio-wthree align-w3 py-5" id="portfolio">
+	<div class="container py-xl-5 py-lg-3">
+		<div class="wthree_pvt_title text-center">
+			<h4 class="w3pvt-title">Latest Blogs </h4>
+		</div>
+		<div>
+			<ul class="demo row">
+				<li class="col-lg-4">
+					<div class="img-grid">
+						<div class="Portfolio-grid1">
+							<a href="#gal1">
+								<img src="images/g1.jpg" alt=" " class="img-fluid" />
+							</a>
+						</div>
+						<div class="port-desc text-center">
+							<h3 class="text-title is-subheader">Trusted network of carriers</h3>
+							<p class="part-text text-body">All of our carriers are choosen because of their deidcation
+								to high
+								quality service standards. This allow us to find the best quality carriers to ship a car
+								very
+								quickly.</p>
+						</div>
+					</div>
+				</li>
+				<li class="col-lg-4">
+					<div class="img-grid">
+						<div class="Portfolio-grid1">
+							<a href="#gal2">
+								<img src="images/g3.jpg" alt=" " class="img-fluid" />
+							</a>
+						</div>
+						<div class="port-desc text-center">
+							<h3 class="text-title is-subheader">Best prices</h3>
+							<p class="part-text text-body">We always offer the best car shipping prices possible. Our
+								smart online
+								calculator determines all factors to get you all the fairest and accurate open car
+								transport cost as possible.
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="col-lg-4">
+					<div class="img-grid">
+						<div class="Portfolio-grid1">
+							<a href="#gal3">
+								<img src="images/g3.jpg" alt=" " class="img-fluid" />
+							</a>
+						</div>
+						<div class="port-desc text-center">
+							<h3 class="text-title is-subheader">No upfront payment</h3>
+							<p class="part-text text-body">As mentioned above, most auto transport companies (the ones
+								you want to
+								book with, at least) charge you once the carrier has been dispatched for your order.
+								This means
+								you’ll be able to book your open auto transport now and worry about the bill later.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section> -->
+<button id="openModal " type="button" #openModal [hidden]="true" class="btn btn-primary modal-hide"
+	data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+</button>
+<div class="modal fade login-or-signup" id="exampleModalCenter" tabindex="-1" role="dialog"
+	aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered custom-model" style="animation-delay: 15s" role="document">
+		<div class="modal-content login-template">
+			<div class="on-load-popup">
+				<div class="close-button"> <button type="button" class="close sh btn" data-bs-dismiss="modal"
+						aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>
+				<img class="w-100 pt-3 pb-3" src="../../assets/images/popup-box.jpg">
+			</div>
+			<div class="modal-footer pop-up-button ">
+				<a> <button (click)="gerQuote()" title="Claim My 35% Off Now" type="button" class="Sub-btn"
+						data-bs-dismiss="modal">Claim My 35% Off Now</button> </a>
+			</div>
+			<countdown class="mainpagee1 pop-modal pd-0-i pop-up-timer" [text]="text"
+				units=" Days | Hours | Minutes | Seconds" [end]="getTime"> </countdown>
+		</div>
+	</div>
+</div>
