@@ -262,12 +262,12 @@
 
 
 						<div class="formBtn">
-							<button class="btn w3ls-btn formbutton" (click)="sendCode()"
+							<button class="btn w3ls-btn formbutton" (click)="requestBooking()"
 								[disabled]="!requestBookingForm3.valid">SEND </button>
 						</div>
 					</div>
 				</form>
-				<form [formGroup]="verifyForm"  *ngIf="verifyToKen">
+				<!-- <form [formGroup]="verifyForm"  *ngIf="verifyToKen">
 					<div class="displays">
 						<div class="form-group">
 							<mat-form-field class="w-100">
@@ -282,7 +282,7 @@
 
 						</div>
 					</div>
-				</form>
+				</form> -->
 			</div>
 		</div>
 
