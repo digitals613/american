@@ -13,7 +13,7 @@ export class MotorcycleTransportationServiceComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('Motorcycle Shipping | Motorcycle Transport | American Auto Transports solution');
+    this.titleService.setTitle('Motorcycle Shipping | Motorcycle Transport | AQ Movers solution');
     this.metaTagService.updateTag(
       { name: 'description', content: 'Hassle-free, Fast, Efficient, Affordable, effective, and premium motorcycle shipping are a few main features of our motorcycle transport. Get A Quote!' }
     );

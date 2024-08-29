@@ -14,7 +14,7 @@ export class MichiganCarShippingComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Michigan Car Shipping | Auto Transport | Car transporter |ship a car');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports is known for its professional and excellent Michigan car shipping. We believe in safe, easy, and affordable car shipping in Michigan.' }
+      { name: 'description', content: 'AQ Movers is known for its professional and excellent Michigan car shipping. We believe in safe, easy, and affordable car shipping in Michigan.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Michigan Car Shipping Auto Transport Car transporter Car Movers Near Me' }

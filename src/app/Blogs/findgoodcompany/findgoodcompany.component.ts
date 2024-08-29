@@ -12,9 +12,9 @@ export class FindgoodcompanyComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('Do I find Good Auto Transport Company Dallas | American Auto Transports');
+    this.titleService.setTitle('Do I find Good Auto Transport Company Dallas | AQ Movers');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports Company is here for you to ship your car effectively and efficiently. Hiring American Auto Transports is the best and easy way to transport your vehicle.' }
+      { name: 'description', content: 'AQ Movers Company is here for you to ship your car effectively and efficiently. Hiring AQ Movers is the best and easy way to transport your vehicle.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Auto Transport Company Auto Transport Solution' }

@@ -14,7 +14,7 @@ export class ShippingInOhioComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Car Shipping Ohio | Auto Transport | Car transporter | Near Me');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Car shipping Ohio. Get your car shipped to/from Ohio by American Auto Transports. To ship your car, get an online instant car shipping quote today.' }
+      { name: 'description', content: 'Car shipping Ohio. Get your car shipped to/from Ohio by AQ Movers. To ship your car, get an online instant car shipping quote today.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Car Shipping Ohio Ohio Auto Transport Car transporter Car Mover' }

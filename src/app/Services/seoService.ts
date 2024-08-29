@@ -11,7 +11,7 @@
 
 //    // ------------ Set Page Title ------------
 //    defaultTitle() {
-//       this.titleService.setTitle('American Auto Transports  | Nationwide Auto Shipping Company');
+//       this.titleService.setTitle('AQ Movers  | Nationwide Auto Shipping Company');
 //    }
 
 //    setTitle(name:any) {

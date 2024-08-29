@@ -13,9 +13,9 @@ export class CarShippingNorthDakotaComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('North Dakota Car Shipping | Car Transporter | American Auto Transports Auto Shipping');
+    this.titleService.setTitle('North Dakota Car Shipping | Car Transporter | AQ Movers Auto Shipping');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Get a Simple, quick & affordable Interstate North Dakota Car Shipping Service. American Auto Transports vehicle Transport Company have shipped more than 10,000 cars.' }
+      { name: 'description', content: 'Get a Simple, quick & affordable Interstate North Dakota Car Shipping Service. AQ Movers vehicle Transport Company have shipped more than 10,000 cars.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'North Dakota Car Shipping Car Transporter Auto Shipping Auto transport' }

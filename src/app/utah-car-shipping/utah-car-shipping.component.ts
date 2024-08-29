@@ -14,7 +14,7 @@ export class UtahCarShippingComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Utah Auto Transport | Car Shipping Service | Auto Shipping ');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports can get your Utah auto transport done with quality and efficiency. We offer 100% assurance of the safety of your vehicle.' }
+      { name: 'description', content: 'AQ Movers can get your Utah auto transport done with quality and efficiency. We offer 100% assurance of the safety of your vehicle.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Auto Shipping Car Shipping Service Utah Auto Transport Ship my car' }

@@ -13,9 +13,9 @@ export class CarShippingAnotherStateComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('How to Ship a Car to another State | Car Transporter | American Auto Transports Auto Shipping');
+    this.titleService.setTitle('How to Ship a Car to another State | Car Transporter | AQ Movers Auto Shipping');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'How to Ship a Car to another State, Get a Simple, quick & affordable Interstate Car Shipping Service. American Auto Transports vehicle Transport Company have shipped more than 10,000 cars' }
+      { name: 'description', content: 'How to Ship a Car to another State, Get a Simple, quick & affordable Interstate Car Shipping Service. AQ Movers vehicle Transport Company have shipped more than 10,000 cars' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'How to Ship a Car to another State Car Transporter Car Shipping Service Auto Transport' }

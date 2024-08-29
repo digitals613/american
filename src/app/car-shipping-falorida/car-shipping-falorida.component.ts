@@ -13,7 +13,7 @@ export class CarShippingFaloridaComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('Florida Car Shipping | Car Transporter | American Auto Transports Auto Shipping');
+    this.titleService.setTitle('Florida Car Shipping | Car Transporter | AQ Movers Auto Shipping');
     this.metaTagService.updateTag(
       { name: 'description', content: 'Ship a car to or from Florida with the top-rated and excellent Florida car shipping company. Calculate your instant car shipping quote online today!' }
     );

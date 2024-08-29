@@ -14,7 +14,7 @@ export class KentuckyCarTransporterComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Kentucky Car Transporter | Car Shipping Company | Car movers');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports is known for its professional and excellent Kentucky Car Transporter .We believe in safe, easy, and affordable car shipping in Kentucky' }
+      { name: 'description', content: 'AQ Movers is known for its professional and excellent Kentucky Car Transporter .We believe in safe, easy, and affordable car shipping in Kentucky' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Kentucky Car Transporter Car Shipping Company Kentucky Auto Transporter' }

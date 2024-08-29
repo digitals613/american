@@ -77,7 +77,7 @@ export class RefundSettlementAgreementComponent implements OnInit {
       this.date=''
       this.clearSignature()
       Swal.fire(
-        'American Auto Transports',
+        'AQ Movers',
         'Thank you, your refund settlement agreement has been signed.',
         'success'
       )

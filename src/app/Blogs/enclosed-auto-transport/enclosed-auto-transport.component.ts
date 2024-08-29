@@ -12,7 +12,7 @@ export class EnclosedAutoTransportComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('Enclosed Car Transport Cost & Covered Car Transport | American Auto Transports');
+    this.titleService.setTitle('Enclosed Car Transport Cost & Covered Car Transport | AQ Movers');
     this.metaTagService.updateTag(
       { name: 'description', content: 'Enclosed Auto Transport with QTS  provides you with safe, secure, and speedy door-to-door service for the pick-up, shipping, and delivery of your vehicle.' }
     );

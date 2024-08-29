@@ -14,7 +14,7 @@ export class CarShippingSanAntonioComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Car Shipping San Antonio | Auto Transport | Auto Shipping');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports is known for its professional and quality Car Shipping San Antonio. We are committed to safe, efficient, and affordable car shipping.' }
+      { name: 'description', content: 'AQ Movers is known for its professional and quality Car Shipping San Antonio. We are committed to safe, efficient, and affordable car shipping.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Car Shipping San Antonio Auto Transport Car Shipping Companies Car Transport' }

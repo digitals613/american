@@ -71,7 +71,7 @@ export class CarrierAgreementComponent implements OnInit {
       this.mcNo=''
       this.clearSignature()
       Swal.fire(
-        'American Auto Transports',
+        'AQ Movers',
         'Thank you your agreement has been signed.',
         'success'
       )

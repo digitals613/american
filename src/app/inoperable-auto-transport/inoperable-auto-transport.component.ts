@@ -12,12 +12,12 @@ export class InoperableAutoTransportComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('inoperable vehicles | nonoperational | American Auto Transports inoperable transport');
+    this.titleService.setTitle('inoperable vehicles | nonoperational | AQ Movers inoperable transport');
     this.metaTagService.updateTag(
       { name: 'description', content: 'Shipping a non-operational vehicle? - Reduce Costs, Get the Best Price Rate Reliable Auto Transport for Inoperable Vehicles' }
     );
     this.metaTagService.updateTag(
-      { name: 'keywords', content: 'noperable vehicles | nonoperational | American Auto Transports inoperable transport' }
+      { name: 'keywords', content: 'noperable vehicles | nonoperational | AQ Movers inoperable transport' }
     );
   }
 

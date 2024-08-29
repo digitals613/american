@@ -103,7 +103,7 @@ export class BookingRequestComponent implements OnInit {
     error=>{
       if(error.status==400){
         Swal.fire(
-          'American Auto Transports',
+          'AQ Movers',
           'Please enter a Valid verification code',
           'error'
         )
@@ -161,7 +161,7 @@ export class BookingRequestComponent implements OnInit {
       this.drop_off = ''
       this.router.navigate(['/thankyou'])
       // Swal.fire(
-      //   'American Auto Transports',
+      //   'AQ Movers',
       //   'Your booking request has been received, we will contact you soon.',
       //   'success'
       // )

@@ -13,12 +13,12 @@ export class MontanaCarShippingComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('Montana Auto Transport | Car Shipping Service | American Auto Transports Auto Shipping');
+    this.titleService.setTitle('Montana Auto Transport | Car Shipping Service | AQ Movers Auto Shipping');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Get a Simple, quick & affordable Interstate Car Shipping Service. American Auto Transports Montana Auto Transport has shipped more than 10,000 cars.' }
+      { name: 'description', content: 'Get a Simple, quick & affordable Interstate Car Shipping Service. AQ Movers Montana Auto Transport has shipped more than 10,000 cars.' }
     );
     this.metaTagService.updateTag(
-      { name: 'keywords', content: 'Montana Auto Transport Car Shipping Service American Auto Transports Auto Shipping Car shipping companies near me' }
+      { name: 'keywords', content: 'Montana Auto Transport Car Shipping Service AQ Movers Auto Shipping Car shipping companies near me' }
     );
   }
   getQuote(){

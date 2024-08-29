@@ -15,7 +15,7 @@ export class MaineAutoTransportComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Maine car shipping | Car Movers | Auto Transport Company');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Ship a car with a top-rated Maine Car Shipping company. American Auto Transports provides efficient and cost-friendly shipping service to/from Maine.' }
+      { name: 'description', content: 'Ship a car with a top-rated Maine Car Shipping company. AQ Movers provides efficient and cost-friendly shipping service to/from Maine.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Maine car shipping Car Movers Auto Transport Company Maine Car Transporter ' }

@@ -15,7 +15,7 @@ export class FaloridaToNewYorkComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Car Shipping Florida to New York | Auto Transport | Car movers');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Car Shipping from Florida to New York has never been easier. American Auto Transports is here to make it easy for you and waiting for you to schedule a delivery.' }
+      { name: 'description', content: 'Car Shipping from Florida to New York has never been easier. AQ Movers is here to make it easy for you and waiting for you to schedule a delivery.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Car Shipping Florida to New York Auto Transport Car movers Car Shipping Service' }

@@ -14,7 +14,7 @@ export class ShippingInArizonaComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Car Shipping Arizona | Auto Shipping company | Car Movers ');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports offers the best and most affordable Car Shipping Arizona. Get an instant car shipping quote online in seconds.' }
+      { name: 'description', content: 'AQ Movers offers the best and most affordable Car Shipping Arizona. Get an instant car shipping quote online in seconds.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Ship My Car Car Transporter Arizona auto shippers Car Shipping quote' }

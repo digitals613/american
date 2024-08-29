@@ -15,7 +15,7 @@ export class CarShippingIllinoisComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Car Shipping Illinois | Auto Transport | Car transporter');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports is known for its professional and quality Car Shipping Illinois. We are committed to safe, efficient, and affordable car shipping.' }
+      { name: 'description', content: 'AQ Movers is known for its professional and quality Car Shipping Illinois. We are committed to safe, efficient, and affordable car shipping.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Car Shipping Illinois Auto Transport Car transporter Car movers Near Me' }

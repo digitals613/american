@@ -15,7 +15,7 @@ export class HoustonCarShippingComponent implements OnInit {
   window.scroll(0,0)
     this.titleService.setTitle('Houston Car Shipping | Auto Transport service | Car movers');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Shipping Cars to and from Houston, American Auto Transports is committed to providing you top-quality Reliable & Affordable Houston Auto Transport Services car shipping to Houston.' }
+      { name: 'description', content: 'Shipping Cars to and from Houston, AQ Movers is committed to providing you top-quality Reliable & Affordable Houston Auto Transport Services car shipping to Houston.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Houston Car Shipping Auto Transport Service Car Shipping Companies Car Shippers' }

@@ -15,7 +15,7 @@ export class TexasCarShippingComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Texas Auto Transport | Car Shipping Service | Auto Shipping ');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Auto transport in Texas with American Auto Transports is simple, affordable, and protects your car from wear and tear caused by long-distance travel.' }
+      { name: 'description', content: 'Auto transport in Texas with AQ Movers is simple, affordable, and protects your car from wear and tear caused by long-distance travel.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Auto Transport Texas Car shipping texas Auto Shippers' }

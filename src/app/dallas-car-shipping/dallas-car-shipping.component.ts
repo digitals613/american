@@ -14,7 +14,7 @@ export class DallasCarShippingComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Dallas Auto Transport | Car Shipping service | Car movers');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Dallas Auto Transport We focus on making it easy for you to ship a car to/from Dallas and know that your vehicle is in great hands with American Auto Transports Carriers.' }
+      { name: 'description', content: 'Dallas Auto Transport We focus on making it easy for you to ship a car to/from Dallas and know that your vehicle is in great hands with AQ Movers Carriers.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Dallas Auto Transport Car shipping service Car transport Car movers' }

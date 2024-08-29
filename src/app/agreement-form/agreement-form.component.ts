@@ -86,7 +86,7 @@ export class AgreementFormComponent implements OnInit {
       this.AgreementForm.reset();
       this.clearSignature()
       Swal.fire(
-        'American Auto Transports',
+        'AQ Movers',
         'Thank you your agreement has been signed.',
         'success'
       )

@@ -15,7 +15,7 @@ export class CarShippingAuroraComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Car Shipping Aurora Co | Auto Transport | Car Transport');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports is known for its professional and quality Car Shipping Aurora Co. We are committed to safe, efficient, and affordable car shipping.' }
+      { name: 'description', content: 'AQ Movers is known for its professional and quality Car Shipping Aurora Co. We are committed to safe, efficient, and affordable car shipping.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Car Shipping Aurora Co Auto Transport Car Transport Car Shipping Service' }

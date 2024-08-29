@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0, 0)
-    this.titleService.setTitle('American Auto Transports  | Nationwide Auto Shipping Company');
+    this.titleService.setTitle('AQ Movers  | Nationwide Auto Shipping Company');
     this.metaTagService.updateTag(
       { name: 'description', content: 'With over 30 years of combined experience in the auto transport industry. Carrying specializes in door-to-door, open-vehicle and enclosed vehicle' }
     );
@@ -154,7 +154,7 @@ export class HomeComponent implements OnInit {
       this.pick_up = ''
       this.drop_off = ''
       Swal.fire(
-        'American Auto Transports',
+        'AQ Movers',
         'Your booking request has been received, we will contact you soon.',
         'success'
       )

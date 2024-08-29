@@ -15,7 +15,7 @@ export class ShippingInLouisianaComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Auto Shipping Louisiana | Auto transport | Car Shipping ');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports offers non-stop and door-to-door service for your auto shipping Louisiana. Our trained drivers carry out your shipment with utmost safety.' }
+      { name: 'description', content: 'AQ Movers offers non-stop and door-to-door service for your auto shipping Louisiana. Our trained drivers carry out your shipment with utmost safety.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Auto Shipping Louisiana Auto transport Car Shipping Car Transport Louisiana' }

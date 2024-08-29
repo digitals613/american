@@ -142,7 +142,7 @@ export class LandingpageComponent implements OnInit {
     error=>{
       if(error.status==400){
         Swal.fire(
-          'American Auto Transports',
+          'AQ Movers',
           'Please enter a Valid verification code',
           'error'
         )
@@ -211,7 +211,7 @@ export class LandingpageComponent implements OnInit {
       }
 
       // Swal.fire(
-      //   'American Auto Transports',
+      //   'AQ Movers',
       //   'Your booking request has been received, we will contact you soon.',
       //   'success'
       // )

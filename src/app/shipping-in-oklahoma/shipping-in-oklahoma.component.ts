@@ -15,7 +15,7 @@ export class ShippingInOklahomaComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Car Shipping Oklahoma | Auto Transport Company | Car movers');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Car shipping Oklahoma. Get your car shipped by the top-rated car shipping company, American Auto Transports. We offer professional and quality car shipping.' }
+      { name: 'description', content: 'Car shipping Oklahoma. Get your car shipped by the top-rated car shipping company, AQ Movers. We offer professional and quality car shipping.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'Car Shipping Oklahoma Auto Transport Company Car movers Car Transporter Oklahoma' }

@@ -189,9 +189,9 @@ export class PaymentComponent implements OnInit {
       this.partial = this.data.partial_allowed
       this.aprtailAllowed = this.data.partial_allowed
     },error=>{
-      Swal.fire("American Auto Transports" , error.error.message, "error")
+      Swal.fire("AQ Movers" , error.error.message, "error")
       // Swal.fire(
-      //   'American Auto Transports',lhrAmerican Auto Transports786
+      //   'AQ Movers',lhrAQ Movers786
       //   'No detail found against this order id',
       //   'error'
       // )
@@ -213,16 +213,16 @@ export class PaymentComponent implements OnInit {
           )
           this.SpinnerService.hide();  
           Swal.fire(
-            'American Auto Transports',
+            'AQ Movers',
             'Congratulations. Your payment successfully done',
             'success'
           )
         },error=>{
           this.SpinnerService.hide();  
-          Swal.fire("American Auto Transports" , error.error.message, "error")
+          Swal.fire("AQ Movers" , error.error.message, "error")
           // if(error.status==400){
           //   Swal.fire(
-          //     'American Auto Transports',
+          //     'AQ Movers',
           //     'Invalid Credit Card Number',
           //     'error'
           //   )
@@ -244,16 +244,16 @@ export class PaymentComponent implements OnInit {
           this.form2.reset()
           this.SpinnerService.hide();  
           Swal.fire(
-            'American Auto Transports',
+            'AQ Movers',
             'Congratulations. Your payment successfully done',
             'success'
           )
         },error=>{
           this.SpinnerService.hide();  
-          Swal.fire("American Auto Transports" , error.error.message, "error")
+          Swal.fire("AQ Movers" , error.error.message, "error")
         //   if(error.status==400){
         //     Swal.fire(
-        //       'American Auto Transports',
+        //       'AQ Movers',
         //       'Invalid Credit Card Number',
         //       'error'
         //     )

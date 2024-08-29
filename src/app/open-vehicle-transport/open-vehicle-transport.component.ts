@@ -14,7 +14,7 @@ export class OpenVehicleTransportComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('Open Vehicle Transport |open car transport| American Auto Transports solution');
+    this.titleService.setTitle('Open Vehicle Transport |open car transport| AQ Movers solution');
     this.metaTagService.updateTag(
       { name: 'description', content: 'open auto transport provides one of the quickest and economical open car shipping service. We make transporting your car long distance easy and hassle free. ' }
     );

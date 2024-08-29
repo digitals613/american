@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewsComponent implements OnInit {
   image = [
-    {name: "Godric", review :"From booking to delivery, my experience was great! Their enclosed transport price was very reasonable and my car arrived in 2 days. I will DEFINITELY use American Auto Transports in the future!"},
-    {name: "Aethelred", review :"American Auto Transports went above and beyond to get my son's new car to him at the military installation he's stationed at. Delivered on time and in perfect condition. A proven winner in my book!"},
-    {name: "Wynstan", review :"This is the third time we’ve used American Auto Transports to ship our daughter’s car from Houston to Atlanta and back. We recommend them highly. Pick up and drop off could not be easier!"},
-    {name: "Godric", review :"From booking to delivery, my experience was great! Their enclosed transport price was very reasonable and my car arrived in 2 days. I will DEFINITELY use American Auto Transports in the future!"},
-    {name: "Aethelred", review :"American Auto Transports went above and beyond to get my son's new car to him at the military installation he's stationed at. Delivered on time and in perfect condition. A proven winner in my book!"},
-    {name: "Wynstan", review :"This is the third time we’ve used American Auto Transports to ship our daughter’s car from Houston to Atlanta and back. We recommend them highly. Pick up and drop off could not be easier!"},
+    {name: "Godric", review :"From booking to delivery, my experience was great! Their enclosed transport price was very reasonable and my car arrived in 2 days. I will DEFINITELY use AQ Movers in the future!"},
+    {name: "Aethelred", review :"AQ Movers went above and beyond to get my son's new car to him at the military installation he's stationed at. Delivered on time and in perfect condition. A proven winner in my book!"},
+    {name: "Wynstan", review :"This is the third time we’ve used AQ Movers to ship our daughter’s car from Houston to Atlanta and back. We recommend them highly. Pick up and drop off could not be easier!"},
+    {name: "Godric", review :"From booking to delivery, my experience was great! Their enclosed transport price was very reasonable and my car arrived in 2 days. I will DEFINITELY use AQ Movers in the future!"},
+    {name: "Aethelred", review :"AQ Movers went above and beyond to get my son's new car to him at the military installation he's stationed at. Delivered on time and in perfect condition. A proven winner in my book!"},
+    {name: "Wynstan", review :"This is the third time we’ve used AQ Movers to ship our daughter’s car from Houston to Atlanta and back. We recommend them highly. Pick up and drop off could not be easier!"},
   ]
   constructor() { }
 

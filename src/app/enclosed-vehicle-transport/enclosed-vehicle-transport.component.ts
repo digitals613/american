@@ -19,13 +19,13 @@ export class EnclosedVehicleTransportComponent implements OnInit {
     window.scroll(0,0)
     this.titleService.setTitle('Enclosed Vehicle Transport | Enclosed Car Transport');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'enclosed car transport is our specialty. Enclosed car transport requires specific handling and American Auto Transports is an instance of car transport companies.' }
+      { name: 'description', content: 'enclosed car transport is our specialty. Enclosed car transport requires specific handling and AQ Movers is an instance of car transport companies.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'enclosed vehicle transport, enclosed car transport, car transport companies' }
     );
     // this.seo.setTitle('Enclosed Vehicle Transport | Enclosed Car Transport');
-    // this.seo.setDescription('enclosed car transport is our specialty. Enclosed car transport requires specific handling and American Auto Transports is an instance of car transport companies.');
+    // this.seo.setDescription('enclosed car transport is our specialty. Enclosed car transport requires specific handling and AQ Movers is an instance of car transport companies.');
     // this.seo.addMetaKeyWords('enclosed vehicle transport, enclosed car transport, car transport companies');
     
 

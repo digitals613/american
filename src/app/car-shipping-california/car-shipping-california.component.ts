@@ -13,9 +13,9 @@ export class CarShippingCaliforniaComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    this.titleService.setTitle('California Car Shipping |Auto Transport service | American Auto Transports Auto Shipping');
+    this.titleService.setTitle('California Car Shipping |Auto Transport service | AQ Movers Auto Shipping');
     this.metaTagService.updateTag(
-      { name: 'description', content: 'American Auto Transports is known for its professional and quality Car Shipping San Antonio. We are committed to safe, efficient, and affordable car shipping.' }
+      { name: 'description', content: 'AQ Movers is known for its professional and quality Car Shipping San Antonio. We are committed to safe, efficient, and affordable car shipping.' }
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: 'California Car Shipping Auto Transport service Car shippers Car Shipping Companies ' }

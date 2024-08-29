@@ -40,7 +40,7 @@ export class ContactUsComponent implements OnInit {
       this.contactUs.reset();
       // console.log(res,'res')
       Swal.fire(
-        'American Auto Transports',
+        'AQ Movers',
         'Thank you for contacting us, we will reply soon on your email.',
         'success'
       )
