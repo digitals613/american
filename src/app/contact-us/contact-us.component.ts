@@ -14,8 +14,8 @@ export class ContactUsComponent implements OnInit {
   phone: any
   message: any
   contactUs: FormGroup;
-  lat=+42.1477261
-  lng=-71.1049768
+  lat=+40.852193
+  lng=-73.159113
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   constructor(private serv: MainService,private formBuilder: FormBuilder) { }
 
